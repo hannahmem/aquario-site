@@ -11,6 +11,13 @@
     --text-lg: 400 3.5rem/1.5 var(--ff);
     --text-lg-sscren: 400 2.25rem/1.5 var(--ff);
     --red-color: #540018;
+
+    --bar-width: 1.75rem;
+    --bar-height: .15rem;
+    --hamburger-gap: 6px;
+    --hamburger-margin: 5px;
+    --animation-timing: 200ms ease-in-out;
+    --hamburger-height: calc(var(--bar-height) * 3 + var(--hamburger-gap) * 2);
 }
 
 html {
