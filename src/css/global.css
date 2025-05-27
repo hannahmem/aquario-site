@@ -1,0 +1,42 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --ff: 'Larken', sans-serif;
+    --text-md: 100 1rem/1.25 var(--ff);
+    --text-ital: italic 1rem/1.25 var(--ff);
+    --text-lg: 400 3.5rem/1.5 var(--ff);
+    --text-lg-sscren: 400 2.25rem/1.5 var(--ff);
+    --red-color: #540018;
+}
+
+html {
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    font: var(--text-md);
+}
+
+h1 {
+    font: var(--text-lg-sscren);
+    text-transform: uppercase;
+    color: var(--red-color);
+}
+
+p {
+    font: var(--text-ital);
+    color: var(--red-color);
+}
+
+@media (width > 52em) {
+    h1 {
+    font: var(--text-lg);
+
+    }
+}
