@@ -3,7 +3,7 @@
     flex-direction: column;
     align-items: center;
 
-    padding: 0 1rem;
+    padding: 0 1.5em;
     margin-bottom: 4em;
 
     & p {
@@ -21,7 +21,7 @@
     display: grid;
     align-items: center;
     justify-content: center;
-    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 1.5rem;
 
     & img {
@@ -30,7 +30,17 @@
     }
 }
 
-@media (width > 52em) {
+@media (29em < width < 48em) {
+    .grid {
+        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+
+        & img {
+            width: 45%;
+        }
+    }
+}
+
+@media (width > 48em) {
     .title-decoration {
         width: 25rem;
     }

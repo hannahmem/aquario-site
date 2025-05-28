@@ -16,7 +16,7 @@
     --bar-height: .15rem;
     --hamburger-gap: 6px;
     --hamburger-margin: 5px;
-    --animation-timing: 200ms ease-in-out;
+    --animation-timing: .4s ease-out;
     --hamburger-height: calc(var(--bar-height) * 3 + var(--hamburger-gap) * 2);
 }
 

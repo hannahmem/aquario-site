@@ -8,12 +8,21 @@ ul {
     background-color: var(--red-color);
     width: min(18em, 100%);
     min-height: 100vh;
-    z-index: 10;
+    z-index: 9;
     position: fixed;
     right: 0;
-    padding-top: calc(var(--hamburger-height) + var(--hamburger-margin) + 1rem);
+    top: 0;
+    box-shadow: -5px 0 5px rgba(0, 0, 0, 0.25);
+    padding-top: calc(var(--hamburger-height) + var(--hamburger-margin) + 3rem);
     translate: 100%;
     transition: translate var(--animation-timing);
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: .5rem;
 }
 
 .hamburger-menu {
@@ -24,9 +33,9 @@ ul {
     gap: var(--hamburger-gap);
     width: max-content;
     position: absolute;
-    top: 20px;
-    right: 5px;
-    z-index: 2;
+    top: 1.25rem;
+    right: 1rem;
+    z-index: 10;
     cursor: pointer;
 }
 
@@ -64,8 +73,9 @@ ul {
     translate: 0 calc(var(--bar-height) / 2);
 }
 
-.hamburger-menu:has(input:checked) {
-    background-color: rgb(252, 240, 240);;
+.hamburger-menu:has(input:checked)::after,
+.hamburger-menu:has(input:checked)::before {
+    background-color: rgb(252, 240, 240);
 }
 
 .hamburger-menu input:checked {
@@ -104,13 +114,6 @@ li a {
     cursor: pointer;
 }
 
-.menu {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: .5rem;
-}
-
 .input-wrapper {
     background-color: white;
     display: flex;
@@ -121,7 +124,7 @@ li a {
     margin-bottom: .75rem;
 }
 
-@media (width > 52em) {
+@media (width > 56em) {
     nav {
         /* border: 1px solid red; */
         display: flex;
