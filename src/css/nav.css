@@ -8,14 +8,15 @@ ul {
     background-color: var(--red-color);
     width: min(18em, 100%);
     min-height: 100vh;
-    z-index: 9;
+
     position: fixed;
-    right: 0;
+    right: -100%;
     top: 0;
+    z-index: 9;
+
     box-shadow: -5px 0 5px rgba(0, 0, 0, 0.25);
     padding-top: calc(var(--hamburger-height) + var(--hamburger-margin) + 3rem);
-    translate: 100%;
-    transition: translate var(--animation-timing);
+    transition: right .5s ease-out;
 }
 
 .menu {
@@ -32,6 +33,7 @@ ul {
     flex-direction: column;
     gap: var(--hamburger-gap);
     width: max-content;
+    height: var(--hamburger-height);
     position: absolute;
     top: 1.25rem;
     right: 1rem;
@@ -41,53 +43,73 @@ ul {
 
 .hamburger-menu::before,
 .hamburger-menu::after,
-.hamburger-menu input {
+.hamburger-menu span {
     content: "";
     width: var(--bar-width);
     height: var(--bar-height);
     background-color: #333;
     border-radius: 1rem;
     transform-origin: left center;
+
     transition: opacity var(--animation-timing), 
                 width var(--animation-timing),
                 rotate var(--animation-timing),
                 translate var(--animation-timing),
                 background-color var(--animation-timing);
+               
 }
 
-.hamburger-menu input {
+#sidebar-active {
     appearance: none;
     outline: none;
     pointer-events: none;
 }
 
-.hamburger-menu:has(input:checked)::before {
+#sidebar-active:checked + .hamburger-menu::before {
     rotate: 45deg;
     width: var(--x-width);
     translate: 0 calc(var(--bar-height) / -2);
 }
 
-.hamburger-menu:has(input:checked)::after {
+#sidebar-active:checked + .hamburger-menu::after {
     rotate: -45deg;
     width: var(--x-width);
     translate: 0 calc(var(--bar-height) / 2);
 }
 
-.hamburger-menu:has(input:checked)::after,
-.hamburger-menu:has(input:checked)::before {
+#sidebar-active:checked + .hamburger-menu::after,
+#sidebar-active:checked + .hamburger-menu::before {
     background-color: rgb(252, 240, 240);
 }
 
-.hamburger-menu input:checked {
+#sidebar-active:checked + .hamburger-menu span {
     opacity: 0;
     width: 0;
 }
 
-.hamburger-menu:has(input:checked) + ul {
-    translate: 0;
+#sidebar-active:checked ~ ul {
+    right: 0;
 }
 
-.hamburger-menu:has(input:checked) + ul > #logo {
+#overlay {
+    transition: background-color var(--animation-timing);
+}
+
+#sidebar-active:checked ~ #overlay {
+    background-color: rgba(66, 64, 64, 0.322);
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+
+#logo {
+    transition: opacity var(--animation-timing);
+}
+
+#logo:has(+ #sidebar-active:checked) {
     opacity: 0;
 }
 
@@ -136,12 +158,8 @@ li a {
         top: 0;
     }
 
-    .hamburger-menu {
-        display: none;
-    }
-
     ul {
-        all: unset;   
+        all: unset; 
     }
 
     li a {
@@ -151,6 +169,10 @@ li a {
         flex-direction: row;
         align-items: center;
         gap: 1rem;
+    }
+
+    .hamburger-menu, #sidebar-active {
+        display: none;
     }
 
     .input-wrapper {
