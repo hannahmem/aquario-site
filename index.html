@@ -25,11 +25,12 @@
             <div class="menu">
                 <form class="input-wrapper" role="search">
                     <input id="search" type="search" placeholder="Buscar produto" aria-label="Buscar produto no site">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" color="#000000" fill="none">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="#000000" fill="none">
                         <path d="M17 17L21 21" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                         <path d="M19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19C15.4183 19 19 15.4183 19 11Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                     </svg>
                 </form>
+
                 <ul>
                     <li>
                         <a href="#">home</a>
@@ -77,6 +78,7 @@
             </ul>
         </nav>
     </header>
+
     <main id="home">
         <section id="hero">
             <img id="banner-luminaria" src="src/assets/photos/banner-luminaria.png" alt="Uma estatueta do Buda meditando como objeto de decoração, luminárias da marca Tiffany suspendidas, um sofá com almofadas coloridas e uma mesa de centro redonda com objetos de decoração. Texto sobre a imagem: Decoração que abraça. Texturas, formas e cores para renovar sua casa.">
@@ -85,12 +87,24 @@
         <section id="decoration">
             <img class="title-decoration" src="src/assets/page-decoration/decoracao.png" alt="">
             <h1>Decoração</h1>
-            <p>Toques que transformam. Decore com alma, viva com estilo.</p>
+            <p class="subtitle">Toques que transformam. Decore com alma, viva com estilo.</p>
             <div class="grid">
-                <img src="src/assets/photos/luminaria.png" alt="Duas luminárias coloridas da marca Tiffany suspendidas">
-                <img src="src/assets/photos/almofadas.png" alt="Conjunto de almofadas coloridas, de cor predominante rosa, com padrões florais">
-                <img src="src/assets/photos/decoracao.png" alt="Estatueta do Buda meditando iluminado por velas nas mãos cujo suporte tem formato floral">
-                <img src="src/assets/photos/casa-e-cozinha.png" alt="Conjunto de objetos decorativos de vidro de diferentes formatos para enfeitar a mesa">
+                <div class="img-container">
+                    <img src="src/assets/photos/luminaria.png" alt="Duas luminárias coloridas da marca Tiffany suspendidas">
+                    <p>iluminação</p>
+                </div>
+                <div class="img-container">
+                    <img src="src/assets/photos/almofadas.png" alt="Conjunto de almofadas coloridas, de cor predominante rosa, com padrões florais">
+                    <p>almofadas</p>
+                </div>
+                <div class="img-container">
+                    <img src="src/assets/photos/decoracao.png" alt="Estatueta do Buda meditando iluminado por velas nas mãos cujo suporte tem formato floral">
+                    <p>decoração</p>
+                </div>
+                <div class="img-container">
+                    <img src="src/assets/photos/casa-e-cozinha.png" alt="Conjunto de objetos decorativos de vidro de diferentes formatos para enfeitar a mesa">
+                    <p>presentes</p>
+                </div>
             </div>
         </section>
     </main>

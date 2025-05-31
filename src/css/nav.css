@@ -1,6 +1,5 @@
 nav {
     display: flex;
-    align-items: center;
     justify-content: space-between;
     padding: 1em 1.5em;
     position: fixed;
@@ -10,8 +9,9 @@ nav {
 }
 
 #logo {
-    transition: opacity .3s;
     margin: 0 auto;
+    opacity: 1;
+    transition: opacity .3s ease;
     
     & img {
         width: 8rem;
@@ -21,6 +21,8 @@ nav {
 #logo:has(~ .menu .input-wrapper:is(:hover, :focus-within) #search) {
     opacity: 0;
 }
+
+/* menu list */
 
 ul {
     /* border: 1px solid red; */
@@ -66,7 +68,7 @@ li {
     
     & a {
         color: var(--text-primary);
-        font: var(--text-md-lg);
+        font: var(--text-md);
         position: relative;
     }
 
@@ -106,107 +108,17 @@ li:not(:last-child)::after {
     bottom: -1.25rem;
 }
 
-.hamburger-menu {
-    --x-width: calc(var(--hamburger-height) * 1.4142);
-
-    display: flex;
-    flex-direction: column;
-    gap: var(--hamburger-gap);
-    width: max-content;
-    height: var(--hamburger-height);
-    position: absolute;
-    top: 1.5rem;
-    left: 1rem;
-    z-index: 10;
-    cursor: pointer;
-}
-
-.hamburger-menu::before,
-.hamburger-menu::after,
-.hamburger-menu span {
-    content: "";
-    width: var(--bar-width);
-    height: var(--bar-height);
-    background-color: var(--red-color);
-    border-radius: 1rem;
-    transform-origin: left center;
-
-    transition: opacity var(--animation-timing), 
-                width var(--animation-timing),
-                rotate var(--animation-timing),
-                translate var(--animation-timing),
-                background-color var(--animation-timing);
-}
-
-#sidebar-active {
-    appearance: none;
-    outline: none;
-    pointer-events: none;
-}
-
-#sidebar-active:checked + .hamburger-menu::before {
-    rotate: 45deg;
-    width: var(--x-width);
-    translate: 0 calc(var(--bar-height) / -2);
-}
-
-#sidebar-active:checked + .hamburger-menu::after {
-    rotate: -45deg;
-    width: var(--x-width);
-    translate: 0 calc(var(--bar-height) / 2);
-}
-
-#sidebar-active:checked + .hamburger-menu::after,
-#sidebar-active:checked + .hamburger-menu::before {
-    background-color: var(--red-color);
-    
-}
-
-#sidebar-active:checked + .hamburger-menu span {
-    opacity: 0;
-    width: 0;
-}
-
-#sidebar-active:checked ~ .menu ul {
-    left: 0;
-}
-
-#sidebar-active:checked ~ .menu ul::before {
-    opacity: 1;
-}
-
-#overlay {
-    transition: background-color var(--animation-timing);
-}
-
-#sidebar-active:checked ~ #overlay {
-    background-color: rgba(66, 64, 64, 0.322);
-    height: 100%;
-    width: 100%;
-    position: fixed;
-    top: 4.8em;
-    left: 0;
-    z-index: 2;
-}
-
-#search {
-    border: none;
-    outline: none;
-    font: var(--text-sm);
-    color: black;
-}
-
+/* search button */
 
 .input-wrapper {
     position: relative;
-    background-color: var(--bg-primary);
-    border: 1px solid rgba(128, 128, 128, 0.411);
     display: flex;
     align-items: center;
+    cursor: pointer;
     border-radius: 1.5rem;
     padding: .5rem .75rem;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
-    cursor: pointer;
+    border: 1px solid transparent;
+    background-color: var(--bg-primary);
 
     transition: scale .3s ease;
 }
@@ -217,12 +129,24 @@ li:not(:last-child)::after {
 }
 
 .input-wrapper:is(:hover, :focus-within) #search {
-    width: 13rem;
+    width: 7rem;
 }
+
+.input-wrapper:is(:hover, :focus-within):has(#search) {
+    border: 1px solid rgba(128, 128, 128, 0.411);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+form svg path {
+    stroke: var(--red-color);
+}
+
+
+/* desktop version */
 
 @media (width > 56em) {
     nav {
-        padding: 1em 3em;
+        padding: 2em 3em;
     }
 
     #logo {
@@ -272,6 +196,6 @@ li:not(:last-child)::after {
     }
 
     .input-wrapper:is(:hover, :focus-within) #search {
-        width: 13rem;
+        width: 10rem;
     }
 }

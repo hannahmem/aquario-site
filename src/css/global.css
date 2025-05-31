@@ -7,9 +7,9 @@
 :root {
     --ff: 'Larken', sans-serif;
     --text-sm: 100 .85rem/1.25 var(--ff);
-    --text-md: 100 1rem/1.25 var(--ff);
-    --text-md-lg: 100 1.25rem/1.25 var(--ff);
-    --text-ital: italic 1rem/1.25 var(--ff);
+    --text-md: 100 1.25rem/1.25 var(--ff);
+    --text-ital: italic 1.25rem/1.25 var(--ff);
+    --text-ital-mob: italic 1rem/1.25 var(--ff);
     --text-lg: 400 3.5rem/1.5 var(--ff);
     --text-lg-sscren: 400 2.25rem/1.5 var(--ff);
     
@@ -44,14 +44,22 @@ h1 {
     color: var(--red-color);
 }
 
-p {
-    font: var(--text-ital);
+p:not(.subtitle) {
+    font: var(--text-md);
+    color: var(--text-primary);
+}
+
+.subtitle {
+    font: var(--text-ital-mob);
     color: var(--red-color);
 }
 
 @media (width > 52em) {
     h1 {
-    font: var(--text-lg);
+        font: var(--text-lg);
+    }
 
+    .subtitle {
+        font: var(--text-ital);
     }
 }

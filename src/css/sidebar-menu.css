@@ -1,0 +1,95 @@
+.hamburger-menu {
+    --x-width: calc(var(--hamburger-height) * 1.4142);
+
+    display: flex;
+    flex-direction: column;
+    gap: var(--hamburger-gap);
+    width: max-content;
+    height: var(--hamburger-height);
+    position: absolute;
+    top: 1.5rem;
+    left: 1rem;
+    z-index: 10;
+    cursor: pointer;
+}
+
+.hamburger-menu::before,
+.hamburger-menu::after,
+.hamburger-menu span {
+    content: "";
+    width: var(--bar-width);
+    height: var(--bar-height);
+    background-color: var(--red-color);
+    border-radius: 1rem;
+    transform-origin: left center;
+
+    transition: opacity var(--animation-timing), 
+                width var(--animation-timing),
+                rotate var(--animation-timing),
+                translate var(--animation-timing),
+                background-color var(--animation-timing);
+}
+
+#sidebar-active {
+    appearance: none;
+    outline: none;
+    pointer-events: none;
+}
+
+#sidebar-active:checked + .hamburger-menu::before {
+    rotate: 45deg;
+    width: var(--x-width);
+    translate: 0 calc(var(--bar-height) / -2);
+}
+
+#sidebar-active:checked + .hamburger-menu::after {
+    rotate: -45deg;
+    width: var(--x-width);
+    translate: 0 calc(var(--bar-height) / 2);
+}
+
+#sidebar-active:checked + .hamburger-menu::after,
+#sidebar-active:checked + .hamburger-menu::before {
+    background-color: var(--red-color);
+    
+}
+
+#sidebar-active:checked + .hamburger-menu span {
+    opacity: 0;
+    width: 0;
+}
+
+#sidebar-active:checked ~ .menu ul {
+    left: 0;
+}
+
+#sidebar-active:checked ~ .menu ul::before {
+    opacity: 1;
+}
+
+#overlay {
+    transition: background-color var(--animation-timing);
+}
+
+#sidebar-active:checked ~ #overlay {
+    background-color: rgba(66, 64, 64, 0.322);
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 4.8em;
+    left: 0;
+    z-index: 2;
+}
+
+#search {
+    border: none;
+    outline: none;
+    font: var(--text-sm);
+    color: black;
+}
+
+@media (width > 56em) {
+    .hamburger-menu, #sidebar-active {
+        display: none;
+    }
+}
