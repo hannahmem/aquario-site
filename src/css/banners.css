@@ -1,7 +1,7 @@
-#hero {
+.banner-container {
     margin: 6em 0 2em;
 }
 
-#banner-luminaria {
+.banners {
     width: 100%;
 }

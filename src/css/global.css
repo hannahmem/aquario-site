@@ -16,6 +16,7 @@
     --text-primary: #000;
     --bg-primary: #fff;
     --red-color: #540018;
+    --yellow-color: #faaf40; 
     --link-hover: #F4C430;
 
     --box-shadow: -5px 0 5px rgba(0, 0, 0, 0.25);
@@ -49,9 +50,21 @@ p:not(.subtitle) {
     color: var(--text-primary);
 }
 
+.title {
+    text-align: center;
+}
+
 .subtitle {
     font: var(--text-ital-mob);
+    text-align: center;
+}
+
+.red {
     color: var(--red-color);
+}
+
+.yellow {
+    color: var(--yellow-color);
 }
 
 @media (width > 52em) {
