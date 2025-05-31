@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="src/css/index.css">
     <link rel="stylesheet" href="https://use.typekit.net/jgy1hlo.css">
+    <script defer src="src/javascript/hamburger-menu.js"></script>
     <title>Aquário</title>
 </head>
 <body>
@@ -16,20 +17,21 @@
                 </a>
             </div>
 
-            <input id="sidebar-active" type="checkbox">
-            <label for="sidebar-active" class="hamburger-menu">
+            <input id="sidebar-active" type="checkbox" aria-hidden="true" tabindex="-1">
+            <label for="sidebar-active" class="hamburger-menu" tabindex="0" role="button" aria-expanded="false" aria-label="Menu de navegação" aria-controls="sidebar">
+                <span class="sr-only"></span>
                 <span></span>
             </label>
-            <label id="overlay" for="sidebar-active"></label>
+            <label id="overlay" for="sidebar-active" tabindex="-1" aria-hidden="true"></label>
 
             <div class="menu">
-                <form class="input-wrapper" role="search">
+                <!-- <form class="input-wrapper" role="search">
                     <input id="search" type="search" placeholder="Buscar produto" aria-label="Buscar produto no site">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="#000000" fill="none">
                         <path d="M17 17L21 21" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                         <path d="M19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19C15.4183 19 19 15.4183 19 11Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                     </svg>
-                </form>
+                </form> -->
 
                 <ul>
                     <li>
