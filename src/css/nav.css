@@ -1,5 +1,8 @@
 nav {
-    padding: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1em 1.5em;
     position: fixed;
     background-color: var(--bg-primary);
     width: 100%;
@@ -7,39 +10,100 @@ nav {
 }
 
 #logo {
-    transition: opacity var(--animation-timing);
-
-    & img{
+    transition: opacity .3s;
+    margin: 0 auto;
+    
+    & img {
         width: 8rem;
     }
 }
 
-#logo:has(+ #sidebar-active:checked) {
+#logo:has(~ .menu .input-wrapper:is(:hover, :focus-within) #search) {
     opacity: 0;
 }
 
 ul {
-    display: flex;
-    justify-content: center;
-    background-color: var(--red-color);
-    width: min(18em, 100%);
-    min-height: 100vh;
-
-    position: fixed;
-    right: -100%;
-    top: 0;
-    z-index: 9;
-
-    box-shadow: var(--box-shadow);
-    padding-top: calc(var(--hamburger-height) + var(--hamburger-margin) + 3rem);
-    transition: right .5s ease-out;
-}
-
-.menu {
+    /* border: 1px solid red; */
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
-    gap: .75rem;
+    gap: 2rem;
+    background-color: var(--bg-primary);
+    width: min(18em, 100%);
+    min-height: 100vh;
+    padding: 1rem 2rem;
+
+    position: fixed;
+    left: -100%;
+    top: 4.75rem;
+    z-index: 9;
+
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    
+    transition: left .5s ease-out;
+}
+
+ul::before {
+    content: "";
+    width: 300%;
+    height: 1px;
+    background-color: var(--text-primary);
+
+    position: absolute;
+    top: 0;
+    left: 2em;
+    opacity: 0;
+
+    transition: opacity .2s;
+}
+
+li {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    cursor: pointer;
+    
+    & a {
+        color: var(--text-primary);
+        font: var(--text-md-lg);
+        position: relative;
+    }
+
+    & a:focus {
+        outline: 1.5px solid var(--link-hover);
+    }
+
+    & a:hover::after {
+        transform: scaleX(1);
+        opacity: 1;
+    }
+
+    & a::after {
+        content: "";
+        width: 100%;
+        height: 2px;
+        background-color: var(--link-hover);
+
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        transform: scaleX(0);
+        opacity: 0;
+
+        transition: .5s;
+    }
+}
+
+
+li:not(:last-child)::after {
+    content: "";
+    width: 100%;
+    height: .5px;
+    background-color: var(--text-primary);
+
+    position: absolute;
+    bottom: -1.25rem;
 }
 
 .hamburger-menu {
@@ -51,8 +115,8 @@ ul {
     width: max-content;
     height: var(--hamburger-height);
     position: absolute;
-    top: 1.25rem;
-    right: 1rem;
+    top: 1.5rem;
+    left: 1rem;
     z-index: 10;
     cursor: pointer;
 }
@@ -63,7 +127,7 @@ ul {
     content: "";
     width: var(--bar-width);
     height: var(--bar-height);
-    background-color: var(--text-primary);
+    background-color: var(--red-color);
     border-radius: 1rem;
     transform-origin: left center;
 
@@ -72,8 +136,6 @@ ul {
                 rotate var(--animation-timing),
                 translate var(--animation-timing),
                 background-color var(--animation-timing);
-                
-               
 }
 
 #sidebar-active {
@@ -96,7 +158,8 @@ ul {
 
 #sidebar-active:checked + .hamburger-menu::after,
 #sidebar-active:checked + .hamburger-menu::before {
-    background-color: rgb(252, 240, 240);
+    background-color: var(--red-color);
+    
 }
 
 #sidebar-active:checked + .hamburger-menu span {
@@ -104,8 +167,12 @@ ul {
     width: 0;
 }
 
-#sidebar-active:checked ~ ul {
-    right: 0;
+#sidebar-active:checked ~ .menu ul {
+    left: 0;
+}
+
+#sidebar-active:checked ~ .menu ul::before {
+    opacity: 1;
 }
 
 #overlay {
@@ -117,49 +184,9 @@ ul {
     height: 100%;
     width: 100%;
     position: fixed;
-    top: 0;
+    top: 4.8em;
     left: 0;
     z-index: 2;
-}
-
-li {
-    list-style: none;
-    display: flex;
-    align-items: center;
-    gap: .5rem;
-    
-    & a {
-        color: var(--bg-primary);
-        position: relative;
-    }
-
-    & a:focus {
-        outline: 1.5px solid var(--link-hover);
-    }
-
-    & a:hover::after {
-        transform: scaleX(1);
-        opacity: 1;
-    }
-
-    & a + svg path {
-        stroke: var(--bg-primary);
-    }
-
-    & a::after {
-        content: "";
-        width: 100%;
-        height: 2px;
-        background-color: var(--link-hover);
-
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        transform: scaleX(0);
-        opacity: 0;
-
-        transition: .5s;
-    }
 }
 
 #search {
@@ -169,37 +196,49 @@ li {
     color: black;
 }
 
+
 .input-wrapper {
     position: relative;
     background-color: var(--bg-primary);
     border: 1px solid rgba(128, 128, 128, 0.411);
     display: flex;
     align-items: center;
-    border: .01rem solid gray;
     border-radius: 1.5rem;
     padding: .5rem .75rem;
-    margin-bottom: .75rem;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
     cursor: pointer;
 
     transition: scale .3s ease;
 }
 
-.input-wrapper:focus-within {
-    scale: 1.1;
+ #search {
+    width: 0;
+    transition: width .4s ease-in-out;
+}
+
+.input-wrapper:is(:hover, :focus-within) #search {
+    width: 13rem;
 }
 
 @media (width > 56em) {
     nav {
-        /* border: 1px solid red; */
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        
+        padding: 1em 3em;
+    }
+
+    #logo {
+        margin: 0;
+    }
+
+    #logo:has(~ .menu .input-wrapper:is(:hover, :focus-within) #search) {
+        opacity: 1;
     }
 
     ul {
         all: unset;
+        display: flex;
+        justify-content: flex-end;
+        width: 100%;
+        gap: 1rem;
     }
 
     li {
@@ -213,7 +252,12 @@ li {
         }
     }
 
+    li:not(:last-child)::after {
+        background-color: transparent;
+    }
+
     .menu {
+        display: flex;
         flex-direction: row;
         align-items: center;
         gap: 1rem;
@@ -223,20 +267,11 @@ li {
         display: none;
     }
 
-    #search {
-        width: 0;
-        transition: width .4s ease-in-out;
+    .input-wrapper {
+        margin-bottom: 0;
     }
 
     .input-wrapper:is(:hover, :focus-within) #search {
         width: 13rem;
-    }
-
-    .input-wrapper:focus-within {
-        scale: 1;
-    }
-
-    .input-wrapper {
-        margin-bottom: 0;
     }
 }
