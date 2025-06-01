@@ -1,41 +1,10 @@
-#highlights {
-    margin-top: 6em;
-    display: block;
-    position: relative;
-    z-index: -1;
-}
-
-#highlights::after {
-    content: "";
-    width: 100%;
-    height: 100%;
-    background-image: url(../assets/page-decoration/destaques-down.png);
-    background-repeat: no-repeat;
-    background-size: 15.625rem;
-    position: absolute;
-
-    background-position: top -3.125rem center;
-    z-index: -1;
-}
-
-#highlights::before {
-    content: "";
-    width: 100%;
-    height: 100%;
-    background-image: url(../assets/page-decoration/destaques-up.png);
-    background-repeat: no-repeat;
-    background-size: 15.625rem;
-    position: absolute;
-    top: -3.31rem;
-    left: 0;
-
-    background-position: top center;
-    z-index: -1;
-}
-
 .grid-container {
+    background-color: var(--bg-secondary);
     display: grid;
+    align-items: center;
+    justify-content: center;
     grid-template-columns: 1fr;
+    overflow: hidden;
 }
 
 .img-wrapper {
@@ -44,20 +13,17 @@
     justify-content: center;
     align-items: center;
     padding: 2em;
-    background-color: var(--bg-secondary);
     border-bottom: 1.5px solid var(--bg-primary);
 
      & img { 
-        width: 25em;
-        height: 20em;
+        width: 350px;
+        height: 293px;
         
     }
 }
 
-
 .text-container {
     padding: 3em;
-    background-color: var(--bg-secondary);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -77,27 +43,40 @@
     padding: 2em;
 }
 
+.highlights-decoration-top {
+    padding: 1.7rem;
+    background-image: url(../assets/page-decoration/destaques-up.png);
+    background-repeat: no-repeat;
+    background-size: 15.625rem;
+
+    background-position: top center;
+}
+
+.highlights-decoration-bottom {
+    background-image: url(../assets/page-decoration/destaques-down.png);
+    background-repeat: no-repeat;
+    background-size: 15.625rem;
+    padding: 1.7rem;
+
+    background-position: bottom center;
+}
+
 
 @media (width > 58.875em) {
-    #highlights {
-        margin-top: 8em;
+
+    .highlights-decoration-top {
+        background-size: 22rem;
+        padding: 2.4rem;
     }
 
-    #highlights::after {
+    .highlights-decoration-bottom {
         background-size: 22rem;
-        background-position: top -70px center;
-    
-    }
-
-    #highlights::before {
-        background-size: 22rem;
-        top: -4.7rem;
-
+        padding: 2.4rem;
     }
 
     .grid-container {
         grid-template-columns: 1fr 2fr;
-
+        align-items: normal;
     }
 
     .img-wrapper {
