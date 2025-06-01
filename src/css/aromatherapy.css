@@ -1,3 +1,7 @@
+/* #aromatherapy {
+    margin-bottom: 6rem;
+} */
+
 .side-elements-yellow::before {
     content: "";
     background: url(../assets/page-decoration/aromaterapia-esquerda.png) no-repeat;

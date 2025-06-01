@@ -1,4 +1,5 @@
 #highlights {
+    margin-top: 6em;
     display: block;
     position: relative;
     z-index: -1;
@@ -8,13 +9,28 @@
     content: "";
     width: 100%;
     height: 100%;
-    background: url(../assets/page-decoration/destaques-down.png) no-repeat;
+    background-image: url(../assets/page-decoration/destaques-down.png);
+    background-repeat: no-repeat;
     background-size: 15.625rem;
     position: absolute;
 
-    background-position: top -50px center;
+    background-position: top -3.125rem center;
     z-index: -1;
-    
+}
+
+#highlights::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-image: url(../assets/page-decoration/destaques-up.png);
+    background-repeat: no-repeat;
+    background-size: 15.625rem;
+    position: absolute;
+    top: -3.31rem;
+    left: 0;
+
+    background-position: top center;
+    z-index: -1;
 }
 
 .grid-container {
@@ -37,6 +53,7 @@
         
     }
 }
+
 
 .text-container {
     padding: 3em;
@@ -62,10 +79,20 @@
 
 
 @media (width > 58.875em) {
+    #highlights {
+        margin-top: 8em;
+    }
+
     #highlights::after {
         background-size: 22rem;
         background-position: top -70px center;
     
+    }
+
+    #highlights::before {
+        background-size: 22rem;
+        top: -4.7rem;
+
     }
 
     .grid-container {
