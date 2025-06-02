@@ -3,7 +3,7 @@
     background-color: var(--bg-secondary);
     margin-bottom: 6em;
     position: relative;
-
+    
     & h1, h2 {
         margin-bottom: 1rem;
     }
@@ -22,6 +22,18 @@
 
     & p:nth-child(4) {
         margin-bottom: 1rem;
+    }
+}
+
+.decoration-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+
+    & img {
+        width: 5rem;
+        padding-bottom: 1rem;
     }
 }
 
@@ -55,8 +67,16 @@
 }
 
 @media (width > 67em) {
+    .decoration-container {
+        & img {
+            width: 6.5rem;
+        }
+    }
+
     .content-wrapper {
         justify-content: space-between;
         padding: 5em;
     }
+
+
 }
