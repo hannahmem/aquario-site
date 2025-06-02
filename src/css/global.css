@@ -13,8 +13,9 @@
     --text-ital-mob: italic 1rem/1.25 var(--ff);
     --text-h2: 500 1.5rem/1.25 var(--ff);
     --text-h2-thin: 200 1.5rem/1.25 var(--ff); 
-    --text-lg: 400 3.5rem/1.5 var(--ff);
-    --text-lg-mob: 400 2.25rem/1.25 var(--ff);
+    --text-h3: 100 1.4rem/1.25 var(--ff);
+    --text-xl: 400 3.5rem/1.5 var(--ff);
+    --text-xl-mob: 400 2.25rem/1.25 var(--ff);
     
     --text-primary: #000;
     --bg-primary: #fff;
@@ -36,6 +37,7 @@
 html {
     width: 100%;
     overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 
 a {
@@ -45,7 +47,7 @@ a {
 }
 
 h1 {
-    font: var(--text-lg-mob);
+    font: var(--text-xl-mob);
     text-transform: uppercase;
 }
 
@@ -55,7 +57,7 @@ h2 {
 }
 
 h3 {
-    font: var(--text-md);
+    font: var(--text-h3);
 }
 
 p:not(.subtitle) {
@@ -89,7 +91,7 @@ p:not(.subtitle) {
 
 @media (width > 52em) {
     h1 {
-        font: var(--text-lg);
+        font: var(--text-xl);
     }
 
     .subtitle {

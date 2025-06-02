@@ -1,3 +1,5 @@
+/* products containers */
+
 .product-images {
     display: flex;
     flex-direction: column;
@@ -6,6 +8,8 @@
     padding: 0 .5em;
     margin-bottom: 4em;
 
+
+    /* clothes and accessories */
     & h1:nth-child(2) {
         padding: 0 1.5rem;
     }
