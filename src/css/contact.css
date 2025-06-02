@@ -54,7 +54,7 @@
     }
 }
 
-@media (width > 52em) {
+@media (width > 67em) {
     .content-wrapper {
         justify-content: space-between;
         padding: 5em;
