@@ -58,4 +58,8 @@
     66% {
         background-image: url(../assets/banners/banner-decoracao-mobile_3.png);
     }
+
+    100% {
+        background-image: url(../assets/banners/banner-decoracao-mobile_1.png);
+    }
 }
