@@ -12,15 +12,57 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 2em;
+    padding: 2em 1em;
     border-bottom: 1.5px solid var(--bg-primary);
     position: relative;
     
     & img { 
-        width: 350px;
-        height: 293px;
+        width: 100%;
     }
 }
+
+.text-container {
+    padding: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    & h2 {
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+    
+    & p {
+        font: var(--text-md-darker);
+    }
+}
+
+.text-border {
+    border: 2px solid var(--bg-primary);
+    padding: 2em;
+}
+
+/* container decoration */
+
+.highlights-decoration-top {
+    padding: 1.7rem;
+    background-image: url(../assets/page-decoration/destaques-up.png);
+    background-repeat: no-repeat;
+    background-size: 15.625rem;
+
+    background-position: top center;
+}
+
+.highlights-decoration-bottom {
+    background-image: url(../assets/page-decoration/destaques-down.png);
+    background-repeat: no-repeat;
+    background-size: 15.625rem;
+    padding: 1.7rem;
+
+    background-position: bottom center;
+}
+
+/* arrow buttons */
 
 #arrow-right,
 #arrow-left {
@@ -56,45 +98,6 @@
     outline: 2px solid currentColor;
 }
 
-.text-container {
-    padding: 2.5em;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    & h2 {
-        text-align: center;
-        margin-bottom: 1rem;
-    }
-    
-    & p {
-        font: var(--text-md-darker);
-    }
-}
-
-.text-border {
-    border: 2px solid var(--bg-primary);
-    padding: 2em;
-}
-
-.highlights-decoration-top {
-    padding: 1.7rem;
-    background-image: url(../assets/page-decoration/destaques-up.png);
-    background-repeat: no-repeat;
-    background-size: 15.625rem;
-
-    background-position: top center;
-}
-
-.highlights-decoration-bottom {
-    background-image: url(../assets/page-decoration/destaques-down.png);
-    background-repeat: no-repeat;
-    background-size: 15.625rem;
-    padding: 1.7rem;
-
-    background-position: bottom center;
-}
-
 
 @media (width > 58.875em) {
 
@@ -109,12 +112,17 @@
     }
 
     .grid-container {
-        grid-template-columns: 1fr 2fr;
+        grid-template-columns: 2fr 3fr;
         align-items: normal;
     }
 
     .img-wrapper {
         border-right: 1.5px solid var(--bg-primary);
         border-bottom: none;
+        padding: 2em;
+    }
+
+    .text-container {
+        padding: 2.5em;
     }
 }
