@@ -1,6 +1,7 @@
 
 const menuButton = document.querySelector(".hamburger-menu");
 const checkbox = document.getElementById("sidebar-active");
+const menuLinks = document.querySelectorAll("li a");
 
 const syncMenuState = () => {
     const isOpen = checkbox.checked;
@@ -35,5 +36,12 @@ document.addEventListener("keydown", (event) => {
         menuButton.focus();
     }
 });
+
+menuLinks.forEach(link => {
+    link.addEventListener("click", () => {
+        checkbox.checked = !checkbox.checked;
+        checkbox.dispatchEvent(new Event("change"));
+    })
+})
 
 syncMenuState();
