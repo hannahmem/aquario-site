@@ -45,10 +45,10 @@
 /* container decoration */
 
 .highlights-decoration-top {
-    padding: 1.7rem;
     background-image: url(../assets/page-decoration/destaques-up.png);
     background-repeat: no-repeat;
-    background-size: 15.625rem;
+    background-size: 20rem;
+    padding: 2.2rem;
 
     background-position: top center;
 }
@@ -56,8 +56,8 @@
 .highlights-decoration-bottom {
     background-image: url(../assets/page-decoration/destaques-down.png);
     background-repeat: no-repeat;
-    background-size: 15.625rem;
-    padding: 1.7rem;
+    background-size: 20rem;
+    padding: 2.2rem;
 
     background-position: bottom center;
 }
@@ -99,16 +99,16 @@
 }
 
 
-@media (width > 58.875em) {
+@media (width > 52em) {
 
     .highlights-decoration-top {
-        background-size: 22rem;
-        padding: 2.4rem;
+        background-size: 25rem;
+        padding: 2.8rem;
     }
 
     .highlights-decoration-bottom {
-        background-size: 22rem;
-        padding: 2.4rem;
+        background-size: 25rem;
+        padding: 2.8rem;
     }
 
     .grid-container {
