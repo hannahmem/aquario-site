@@ -19,8 +19,10 @@
     }
 }
 
-.img-wrapper {
+.about-container > .img-wrapper {
     background-color: var(--bg-secondary);
+    padding: 2rem 0;
+    text-align: center;
 }
 
 @media (width > 52em) {

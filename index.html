@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="src/css/index.css">
     <link rel="stylesheet" href="https://use.typekit.net/jgy1hlo.css">
     <script defer src="src/javascript/hamburger-menu.js"></script>
+    <script defer src="src/javascript/carousel.js"></script>
     <title>Aquário</title>
 </head>
 <body>
@@ -120,9 +121,9 @@
                     <img id="decoration-up" src="src/assets/banners/banner-tiffany/decoracao1.png" alt="">
                     <div class="text-wrapper">
                         <div class="text-border">
-                            <h2 class="yellow">luminárias tiffany</h2>
-                            <span class="subtitle yellow">encanto e elegância atemporal</span>
-                            <p class="yellow">Inspirados no estilo Art Nouveau, os abajures e Tiffany são obras de arte em vidro colorido. Cada peça é feita com atenção aos detalhes, criando efeitos de luz únicos que transformam qualquer ambiente. Com suas cúpulas de mosaico vítreo e bases  ornamentadas, eles combinam
+                            <h2 class="red">luminárias tiffany</h2>
+                            <span class="subtitle red">encanto e elegância atemporal</span>
+                            <p class="red">Inspirados no estilo Art Nouveau, os abajures e Tiffany são obras de arte em vidro colorido. Cada peça é feita com atenção aos detalhes, criando efeitos de luz únicos que transformam qualquer ambiente. Com suas cúpulas de mosaico vítreo e bases  ornamentadas, eles combinam
                             charme clássico com sofisticação artesanal. Um toque de beleza, história e cor para sua casa.</p>
                         </div>
                     </div>
@@ -131,7 +132,7 @@
 
                 <div class="highlights-1-decoration">
                     <div class="img-wrapper">
-                        <img src="src/assets/instagram/aromatizador.png" alt="">
+                        <img src="src/assets/banners/banner-tiffany/banner_tiffany_03.png" alt="">
                     </div>
                     <img id="decoration-down2" src="src/assets/banners/banner-tiffany/decoracao2.png" alt="">
                 </div>
@@ -168,15 +169,23 @@
         <section id="highlights-2">
             <div class="highlights-decoration-top"></div>
             <div class="grid-container">
-                <div class="img-wrapper">
-                    <button id="arrow-left" type="button">
+                <div class="img-wrapper" data-carousel>
+                    <ul class="slide-list" data-slides>
+                        <li class="slides" data-active><img src="src/assets/photos/floresta-verde/difusor.png" alt="Recipiente de vidro de aromatizador de ambiente de alecrim."></li>
+                        <li class="slides"><img src="src/assets/photos/floresta-verde/difusor_com_varetas.png" alt=""></li>
+                        <li class="slides"><img src="src/assets/photos/floresta-verde/sachê.png" alt=""></li>
+                        <li class="slides"><img src="src/assets/photos/floresta-verde/spray.png" alt=""></li>
+                        <li class="slides"><img src="src/assets/photos/floresta-verde/vela.png" alt=""></li>
+                        <li class="slides"><img src="src/assets/photos/floresta-verde/água-de-passar.png" alt=""></li>
+                    </ul>
+                    <button id="arrow-left" type="button" data-carousel-button="prev">
                         <?xml version="1.0" encoding="UTF-8"?><svg width="28px" height="28px" stroke-width="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" color="#000000"><path d="M16 12H8M8 12L11.5 15.5M8 12L11.5 8.5" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
                     </button>
-                    <img src="src/assets/photos/floresta-verde.png" alt="Recipiente de vidro de aromatizador de ambiente de alecrim.">
-                    <button id="arrow-right" type="button">
+                    <button id="arrow-right" type="button" data-carousel-button="next">
                         <?xml version="1.0" encoding="UTF-8"?><svg width="28px" height="28px" stroke-width="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" color="#000000"><path d="M8 12H16M16 12L12.5 8.5M16 12L12.5 15.5" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
                     </button>
                 </div>
+
                 <div class="text-container">
                     <div class="text-border">
                         <h2 class="red">floresta verde</h2>
