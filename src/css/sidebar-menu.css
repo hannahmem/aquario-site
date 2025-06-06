@@ -89,7 +89,7 @@
     height: 100%;
     width: 100%;
     position: fixed;
-    top: 4.8em;
+    top: 5em;
     left: 0;
     z-index: 2;
 }
@@ -104,5 +104,9 @@
 @media (width > 56em) {
     .hamburger-menu, #sidebar-active {
         display: none;
+    }
+
+    #sidebar-active:checked ~ #overlay {
+        all: unset;
     }
 }

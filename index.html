@@ -84,9 +84,21 @@
 
     <main id="home">
         <section id="banner-decoracao" class="banner-container" aria-labelledby="banner-heading">
-            <div class="banner-mobile" role="img">
+            <!-- <div class="banner-mobile" role="img">
                 <h2 id="banner-heading" class="sr-only">Decoração que abraça</h2>
                 <span id="banner-mobile" class="sr-only">Texturas, formas e cores para renovar sua casa.</span>
+            </div> -->
+            <div class="slider-wrapper">
+                <div class="slider">
+                    <img id="slide-1" src="src/assets/banners/banner_decoracao_mobilebanner-1.png" alt="">
+                    <img id="slide-2" src="src/assets/banners/banner_decoracao_mobilebanner-2.png" alt="">
+                    <img id="slide-3" src="src/assets/banners/banner_decoracao_mobilebanner-3.png" alt="">
+                </div>
+                <div class="slider-nav">
+                    <a href="#slide-1"></a>
+                    <a href="#slide-2"></a>
+                    <a href="#slide-3"></a>
+                </div>
             </div>
             <img class="banners banner-desktop" src="src/assets/banners/banner-decoracao-desktop.png" alt="Uma estatueta do Buda meditando como objeto de decoração, luminárias da marca Tiffany suspendidas, um sofá com almofadas coloridas e uma mesa de centro redonda com objetos de decoração. Texto sobre a imagem: Decoração que abraça. Texturas, formas e cores para renovar sua casa.">
         </section>
@@ -171,12 +183,12 @@
             <div class="grid-container">
                 <div class="img-wrapper" aria-label="Slide de fotos" data-carousel>
                     <ul class="slide-list" data-slides>
-                        <li class="slides" data-active><img src="src/assets/photos/floresta-verde/difusor.png" alt="Recipiente de vidro de aromatizador de ambiente de alecrim."></li>
-                        <li class="slides"><img src="src/assets/photos/floresta-verde/difusor_com_varetas.png" alt=""></li>
-                        <li class="slides"><img src="src/assets/photos/floresta-verde/sachê.png" alt=""></li>
-                        <li class="slides"><img src="src/assets/photos/floresta-verde/spray.png" alt=""></li>
-                        <li class="slides"><img src="src/assets/photos/floresta-verde/vela.png" alt=""></li>
-                        <li class="slides"><img src="src/assets/photos/floresta-verde/água-de-passar.png" alt=""></li>
+                        <li class="slides" data-active><img src="src/assets/photos/floresta-verde/difusor.png" alt="Aromatizador de ambiente com aroma de alecrim."></li>
+                        <li class="slides"><img src="src/assets/photos/floresta-verde/difusor_com_varetas.png" alt="Difusor de aroma de pétalas frescas com varetas."></li>
+                        <li class="slides"><img src="src/assets/photos/floresta-verde/sachê.png" alt="Sachê perfumado com aroma de pétalas frescas."></li>
+                        <li class="slides"><img src="src/assets/photos/floresta-verde/spray.png" alt="Spray aromatizante com aroma de pétalas frescas."></li>
+                        <li class="slides"><img src="src/assets/photos/floresta-verde/vela.png" alt="Vela perfumada com aroma de canela com mel."></li>
+                        <li class="slides"><img src="src/assets/photos/floresta-verde/água-de-passar.png" alt="Spray de água de passar roupa com aroma de lavanda."></li>
                     </ul>
 
                     <button id="arrow-left" type="button" data-carousel-button="prev" aria-label="Imagem anterior">
@@ -226,7 +238,10 @@
         </section>
             
         <section id="about">
-            <h1 class="title yellow">nossa história</h1>
+            <div class="title-wrapper">
+                <img src="src/assets/page-decoration/nossa-historia.svg" alt="">
+                <h1 class="title yellow">nossa história</h1>
+            </div>
             <div class="about-container">
                 <div class="text-wrapper">
                     <h3 class="yellow">A loja Aquário</h3>
