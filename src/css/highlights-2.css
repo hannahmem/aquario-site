@@ -49,6 +49,42 @@
     object-fit: contain;
 }
 
+/* arrow buttons */
+
+#arrow-right,
+#arrow-left {
+    border: none;
+    background: none;
+    position: absolute;
+    cursor: pointer;
+
+    padding-top: .15rem;
+    outline: 2px solid transparent;
+
+    & svg path {
+        stroke: var(--text-transparent);
+        transition: stroke .3s ease;
+    }
+}
+
+#arrow-right {
+    margin-left: 16rem;
+}
+
+#arrow-left {
+    margin-right: 16rem;
+}
+
+#arrow-left:is(:hover, :focus-visible) > svg path,
+#arrow-right:is(:hover, :focus-visible) > svg path {
+    stroke: var(--text-primary);
+}
+
+#arrow-left:focus-visible, 
+#arrow-right:focus-visible {
+    outline: 2px solid currentColor;
+}
+
 /* text container */
 
 .text-container {
@@ -90,42 +126,6 @@
     padding: 2.2rem;
 
     background-position: bottom center;
-}
-
-/* arrow buttons */
-
-#arrow-right,
-#arrow-left {
-    border: none;
-    background: none;
-    position: absolute;
-    cursor: pointer;
-
-    padding-top: .15rem;
-    outline: 2px solid transparent;
-
-    & svg path {
-        stroke: var(--text-transparent);
-        transition: stroke .3s ease;
-    }
-}
-
-#arrow-right {
-    right: 3rem;
-}
-
-#arrow-left {
-    left: 3rem;
-}
-
-#arrow-left:is(:hover, :focus-visible) > svg path,
-#arrow-right:is(:hover, :focus-visible) > svg path {
-    stroke: var(--text-primary);
-}
-
-#arrow-left:focus-visible, 
-#arrow-right:focus-visible {
-    outline: 2px solid currentColor;
 }
 
 
