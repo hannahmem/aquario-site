@@ -11,18 +11,46 @@
     justify-content: center;
     padding: 0 1rem;
     height: fit-content;
+    
 
-    & .img-wrapper {
+    & .img-container {
         width: 100%;
-        background-color: var(--bg-secondary);
-        text-align: center;
-        /* padding: 1rem; */
-
-        & img {
+        background-color: var(--red-color);
+        padding: 2rem;
+        
+        
+        & .img-border {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            flex-direction: column;
             width: 100%;
+            min-height: 22em;
+            border: 2px solid var(--bg-secondary);
+        }
+
+        & .slides {
+            all: unset;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 45%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            object-fit: contain;
         }
     }
-    
+
+    & .text-wrapper {
+        background-color: var(--red-color);
+        border-bottom: 1px solid var(--bg-secondary);
+
+        & p, h2, span {
+            color: var(--bg-secondary);
+        }
+    }
+
 }
 
 .highlights-1-decoration {
@@ -33,6 +61,7 @@
 
 #decoration-up {
     width: 20em;
+    z-index: -1;
     position: relative;
     top: 2rem;
 }
@@ -42,6 +71,7 @@
     bottom: 2rem;
     width: 25em;
     display: none;
+    z-index: -1;
 }
 
 #decoration-down2 {
@@ -49,24 +79,28 @@
     bottom: 2rem;
     width: 20em;
     display: block;
+    z-index: -1;
 }
-
 
 @media (width > 52em) {
     .box-container {
         grid-template-columns: 3fr 2fr;
         padding: 0 2rem;
-    }
 
-    #highlights-1 {
-        & .img-wrapper {
-            align-self: center;
+        & .text-wrapper {
+            border-bottom: none;
         }
-    }
-    .highlights-1-decoration {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+
+        & .img-container {
+            & .img-border {
+                min-height: 25em;
+            }
+
+            & .slides {
+                width: 90%;
+                height: 90%;
+            }
+        }
     }
 
     #decoration-up {

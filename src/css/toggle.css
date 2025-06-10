@@ -1,0 +1,70 @@
+/* highlights 1 */
+
+#toggle-btn {
+    appearance: none;
+    position: absolute;
+}
+
+#toggle-btn + label {
+    position: relative;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding-bottom: .75em;
+    z-index: 1; 
+}
+
+#toggle-btn + label::before {
+    content: "OFF";
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    position: relative;
+    padding-right: .5rem;
+    color: var(--red-color);
+    font-size: .875rem;
+    font-family: var(--ff);
+    width: 4em;
+    height: 2em;
+    background-color: var(--bg-secondary);
+    border-radius: 1.5em;
+    border: 1px solid transparent;
+}
+
+#toggle-btn + label::after {
+    position: absolute;
+    content: "";
+    width: 1.75em;
+    height: 1.75em;
+    left: 0;
+    background-color: var(--bg-secondary);
+    border-radius: 50%;
+    border: 1px solid var(--red-color);
+    transition: left .3s ease;
+}
+
+#toggle-btn:checked + label::before {
+    background-color: var(--red-color);
+    border: 1px solid var(--bg-secondary);
+    color: var(--bg-secondary);
+    content: "ON";
+    justify-content: flex-start;
+    padding-left: .65rem;
+    width: 3em;
+}
+
+#toggle-btn:checked + label::after {
+    left: 60%;
+}
+
+.slide-list li:nth-child(2) {
+    opacity: 0;
+}
+
+#toggle-btn:checked ~ .slide-list li:nth-child(1) {
+    opacity: 0;
+}
+
+#toggle-btn:checked ~ .slide-list li:nth-child(2) {
+    opacity: 1;
+}

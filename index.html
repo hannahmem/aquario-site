@@ -88,18 +88,21 @@
                 <h2 id="banner-heading" class="sr-only">Decoração que abraça</h2>
                 <span id="banner-mobile" class="sr-only">Texturas, formas e cores para renovar sua casa.</span>
             </div> -->
+            
             <div class="slider-wrapper">
                 <div class="slider">
-                    <img id="slide-1" src="src/assets/banners/banner_decoracao_mobilebanner-1.png" alt="">
-                    <img id="slide-2" src="src/assets/banners/banner_decoracao_mobilebanner-2.png" alt="">
-                    <img id="slide-3" src="src/assets/banners/banner_decoracao_mobilebanner-3.png" alt="">
+                    <img class="slide-mobile active" src="src/assets/banners/banner_decoracao_mobilebanner-1.png" alt="">
+                    <img class="slide-mobile" src="src/assets/banners/banner_decoracao_mobilebanner-2.png" alt="">
+                    <img class="slide-mobile" src="src/assets/banners/banner_decoracao_mobilebanner-3.png" alt="">
                 </div>
+                
                 <div class="slider-nav">
-                    <a href="#slide-1"></a>
-                    <a href="#slide-2"></a>
-                    <a href="#slide-3"></a>
+                    <button type="button" class="carousel-button active"></button>
+                    <button type="button" class="carousel-button"></button>
+                    <button type="button" class="carousel-button"></button>
                 </div>
             </div>
+
             <img class="banners banner-desktop" src="src/assets/banners/banner-decoracao-desktop.png" alt="Uma estatueta do Buda meditando como objeto de decoração, luminárias da marca Tiffany suspendidas, um sofá com almofadas coloridas e uma mesa de centro redonda com objetos de decoração. Texto sobre a imagem: Decoração que abraça. Texturas, formas e cores para renovar sua casa.">
         </section>
 
@@ -130,7 +133,7 @@
         <section id="highlights-1">
             <div class="box-container">
                 <div class="highlights-1-decoration">
-                    <img id="decoration-up" src="src/assets/banners/banner-tiffany/decoracao1.png" alt="">
+                    <img id="decoration-up" src="src/assets/page-decoration/tiffany-up.svg" alt="">
                     <div class="text-wrapper">
                         <div class="text-border">
                             <h2 class="red">luminárias tiffany</h2>
@@ -139,14 +142,21 @@
                             charme clássico com sofisticação artesanal. Um toque de beleza, história e cor para sua casa.</p>
                         </div>
                     </div>
-                    <img id="decoration-down1" src="src/assets/banners/banner-tiffany/decoracao2.png" alt="">
+                    <img id="decoration-down1" src="src/assets/page-decoration/tiffany-down.svg" alt="">
                 </div>
 
                 <div class="highlights-1-decoration">
-                    <div class="img-wrapper">
-                        <img src="src/assets/banners/banner-tiffany/banner_tiffany_03.png" alt="">
+                    <div class="img-container">
+                        <div class="img-border">
+                            <input role="switch" id="toggle-btn" type="checkbox">
+                            <label for="toggle-btn"></label>
+                            <ul class="slide-list">
+                                <li><img class="slides" src="src/assets/banners/abajur-apagado_3.png" alt=""></li>
+                                <li><img class="slides" src="src/assets/banners/abajur-aceso_3.png" alt=""></li>
+                            </ul>
+                        </div>
                     </div>
-                    <img id="decoration-down2" src="src/assets/banners/banner-tiffany/decoracao2.png" alt="">
+                    <img id="decoration-down2" src="src/assets/page-decoration/tiffany-down.svg" alt="">
                 </div>
             </div>
         </section>
