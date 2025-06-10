@@ -15,7 +15,7 @@
     & .img-container {
         width: 100%;
         background-color: var(--red-color);
-        padding: 2rem;
+        padding: 1.5rem;
         
         
         & .img-border {
@@ -24,15 +24,13 @@
             justify-content: center;
             flex-direction: column-reverse;
             width: 100%;
-            min-height: max-content;
+            height: min(100%, 20.75rem);
             border: 2px solid var(--bg-secondary);
         }
 
         & .slide-list {
             display: flex;
             justify-content: center;
-            width: 90%;
-            height: 90%;
         }
 
         & li img {
@@ -43,7 +41,11 @@
 
     & .text-wrapper {
         background-color: var(--red-color);
-        border-bottom: 1px solid var(--bg-secondary);
+        border-bottom: 1px solid var(--bg-primary);
+
+        & .text-border {
+            border-color: var(--bg-secondary);
+        }
 
         & p, h2, span {
             color: var(--bg-secondary);
@@ -62,20 +64,20 @@
     width: 20em;
     z-index: -1;
     position: relative;
-    top: 2rem;
+    top: 1.5rem;
 }
 
 #decoration-down1 {
     position: relative;
     bottom: 2rem;
-    width: 25em;
+    width: 20em;
     display: none;
     z-index: -1;
 }
 
 #decoration-down2 {
     position: relative;
-    bottom: 2rem;
+    bottom: 1.5rem;
     width: 20em;
     display: block;
     z-index: -1;
@@ -84,16 +86,22 @@
 @media (width > 52em) {
     .box-container {
         grid-template-columns: 1fr 1fr;
-        padding: 0 2rem;
+
+        & .img-container {
+            padding: 2rem;
+        }
 
         & .text-wrapper {
             border-bottom: none;
         }
+
+        & .slide-list {
+            width: 100%;
+            height: 100%;
+        }
+
     }
 
-    #decoration-up {
-        width: 25em;
-    }
 
     #decoration-down1 {
         display: block;
@@ -104,8 +112,20 @@
     }
 }
 
-@media (width > 61em) {
+@media (width > 68em) {
     .box-container {
         grid-template-columns: 3fr 2fr;
+
+        & .img-container {
+            padding: 2rem;
+        }
+    }
+
+    #decoration-up {
+        width: 25em;
+    }
+
+    #decoration-down1 {
+        width: 25em;
     }
 }

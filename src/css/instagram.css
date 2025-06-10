@@ -1,7 +1,7 @@
 .insta-container {
-    width: 80%;
+    width: 90%;
     margin: 0 auto 3em;
-    padding: 2rem 3rem;
+    padding: 2rem 1rem;
     border-radius: 2rem;
 
     display: flex;
@@ -27,8 +27,9 @@
     }
 }
 
-@media (width > 52em) {
+@media (width > 61em) {
     .insta-container {
-        width: 70%;
+        width: 75%;
+        padding: 2rem 3rem;
     }
 }

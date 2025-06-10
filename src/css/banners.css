@@ -6,6 +6,26 @@
     display: none;
 }
 
+#banner-aromatherapy {
+    margin: 2em 0;
+}
+
+.mobile {
+    display: inline-flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+
+    & img {
+        width: 100%;
+        object-fit: contain;
+    }
+}
+
+.desktop {
+    display: none;
+}
+
 .slider-wrapper {
     width: 100%;
     position: relative;
@@ -28,7 +48,6 @@
 .slider img {
     flex: 1 0 100%;
     width: 100%;
-    scroll-snap-align: start;
     object-fit: contain;
 }
 
@@ -91,9 +110,17 @@ input[type="radio"] {
 } */
 
 
-@media (width > 47em) {
+@media (width > 49em) {
     .banner-container {
         margin: 5em 0 3em;
+    }
+
+    .desktop {
+        display: block;
+    }
+
+    .mobile {
+        display: none;
     }
 
     .banner-desktop {
