@@ -11,7 +11,11 @@
     align-items: center;
     cursor: pointer;
     padding-bottom: .75em;
-    z-index: 1; 
+    z-index: 1;
+}
+
+#toggle-btn:focus-visible + label::before {
+    outline: 3px solid var(--yellow-color);
 }
 
 #toggle-btn + label::before {
@@ -58,13 +62,13 @@
 }
 
 .slide-list li:nth-child(2) {
-    opacity: 0;
+    display: none;
 }
 
 #toggle-btn:checked ~ .slide-list li:nth-child(1) {
-    opacity: 0;
+    display: none;
 }
 
 #toggle-btn:checked ~ .slide-list li:nth-child(2) {
-    opacity: 1;
+    display: block;
 }
