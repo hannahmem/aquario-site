@@ -47,7 +47,17 @@
     background-color: var(--bg-primary);
 }
 
-.whatsapp-wrapper {
+.text-icon-wrapper {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+#whatsapp {
+    align-items: flex-end;
+}
+
+/* .whatsapp-wrapper {
     position: relative;
 }
 
@@ -64,7 +74,7 @@
     & a svg:hover {
         scale: 1;
     }
-}
+} */
 
 @media (width > 67em) {
     .decoration-container {

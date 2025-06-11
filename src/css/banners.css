@@ -2,10 +2,6 @@
     width: 100%;
 }
 
-.banner-desktop {
-    display: none;
-}
-
 #banner-aromatherapy {
     margin: 2em 0;
 }
@@ -42,7 +38,7 @@
 
     box-shadow: var(--box-shadow);
 
-    /* animation: slide 16s infinite; */
+    animation: slide 16s infinite;
 }
 
 .slider img {
@@ -112,7 +108,15 @@ input[type="radio"] {
 
 @media (width > 49em) {
     .banner-container {
-        margin: 5em 0 3em;
+        margin: 6em 0 3em;
+    }
+
+    .banner-desktop-container {
+        width: 100%;
+
+        & img {
+            width: 100%;
+        }
     }
 
     .desktop {
@@ -121,10 +125,6 @@ input[type="radio"] {
 
     .mobile {
         display: none;
-    }
-
-    .banner-desktop {
-        display: block;
     }
 
     .slider-wrapper {
