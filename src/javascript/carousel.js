@@ -46,39 +46,39 @@ buttons.forEach(button => {
 
 // })
 
-document.addEventListener('DOMContentLoaded', () => {
-  const dotsNav = document.querySelectorAll('.carousel-button');
+// document.addEventListener('DOMContentLoaded', () => {
+//   const dotsNav = document.querySelectorAll('.carousel-button');
   
-  // 1. Verificação inicial obrigatória
-  if (!dotsNav.length) {
-    console.error('Nenhum botão encontrado! Verifique o seletor.');
-    return;
-  }
+//   // 1. Verificação inicial obrigatória
+//   if (!dotsNav.length) {
+//     console.error('Nenhum botão encontrado! Verifique o seletor.');
+//     return;
+//   }
 
-  // 2. Teste de eventos alternativo (elimina falsos positivos)
-  dotsNav.forEach(dot => {
-    // Evento mouseenter para teste básico
-    dot.addEventListener('mouseenter', () => {
-      dot.style.border = '2px solid red'; // Feedback visual imediato
-    });
+//   // 2. Teste de eventos alternativo (elimina falsos positivos)
+//   dotsNav.forEach(dot => {
+//     // Evento mouseenter para teste básico
+//     dot.addEventListener('mouseenter', () => {
+//       dot.style.border = '2px solid red'; // Feedback visual imediato
+//     });
 
-    // Evento click principal
-    dot.addEventListener('click', function(e) {
-      e.stopPropagation(); // Impede propagação
-      console.log('Clique registrado!', this);
+//     // Evento click principal
+//     dot.addEventListener('click', function(e) {
+//       e.stopPropagation(); // Impede propagação
+//       console.log('Clique registrado!', this);
 
-      // Remova classes ativas existentes
-      document.querySelectorAll('.carousel-button.active').forEach(el => {
-        el.classList.remove('active');
-      });
+//       // Remova classes ativas existentes
+//       document.querySelectorAll('.carousel-button.active').forEach(el => {
+//         el.classList.remove('active');
+//       });
 
-      // Adicione classe ao botão atual
-      this.classList.add('active');
+//       // Adicione classe ao botão atual
+//       this.classList.add('active');
 
-      // Sua lógica de slides aqui...
-    }, { once: false, passive: true }); // Opções otimizadas
-  });
-});
+//       // Sua lógica de slides aqui...
+//     }, { once: false, passive: true }); // Opções otimizadas
+//   });
+// });
 
 // dotsNav.forEach((dot, index) => {
 //     dot.addEventListener("click", () => {

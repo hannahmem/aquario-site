@@ -6,7 +6,10 @@
 }
 
 #toggle-btn + label {
-    position: relative;
+    position: absolute;
+    bottom: 8%;
+    left: 50%;
+    transform: translateX(-50%);
     display: flex;
     align-items: center;
     cursor: pointer;
@@ -28,6 +31,7 @@
     color: var(--red-color);
     font-size: .875rem;
     font-family: var(--ff);
+    font-style: italic;
     width: 4em;
     height: 2em;
     background-color: var(--bg-secondary);
@@ -49,7 +53,6 @@
 
 #toggle-btn:checked + label::before {
     background-color: var(--red-color);
-    border: 1px solid var(--bg-secondary);
     color: var(--bg-secondary);
     content: "ON";
     justify-content: flex-start;
@@ -61,14 +64,21 @@
     left: 60%;
 }
 
-.slide-list li:nth-child(2) {
+.slide-list li.switch:nth-child(2) {
     display: none;
 }
 
-#toggle-btn:checked ~ .slide-list li:nth-child(1) {
+#toggle-btn:checked ~ .slide-list li.switch:nth-child(1) {
     display: none;
 }
 
-#toggle-btn:checked ~ .slide-list li:nth-child(2) {
+#toggle-btn:checked ~ .slide-list li.switch:nth-child(2) {
     display: block;
+}
+
+@media (width > 72em) {
+    #toggle-btn + label {
+        bottom: 11%;
+        left: 45%;
+    }
 }
