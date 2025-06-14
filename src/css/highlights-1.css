@@ -35,9 +35,8 @@
             display: flex;
             flex-direction: column;
             justify-content: center;
-            min-height: 30rem;
             margin: .5rem;
-            padding: 0 3rem;
+            padding: 3rem 3rem;
         }
 
         & h2, span, p {
@@ -115,6 +114,7 @@
         }
 
         & .text-container > .text-border {
+            min-height: 30rem;
             margin: 3rem;
         }
     }
