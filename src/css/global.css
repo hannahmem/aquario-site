@@ -34,7 +34,8 @@
     --animation-timing: .4s ease-in-out;
     --hamburger-height: calc(var(--bar-height) * 3 + var(--hamburger-gap) * 2);
 
-    --section-margin: 0 3rem;
+    --section-margin: 3rem;
+    --gap: 1rem;
 }
 
 html {
@@ -64,6 +65,10 @@ h3 {
 }
 
 p:not(.subtitle) {
+    font: var(--text-md);
+}
+
+span:not(.subtitle) {
     font: var(--text-md);
 }
 

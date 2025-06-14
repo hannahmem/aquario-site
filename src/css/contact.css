@@ -1,7 +1,6 @@
 .contact-container {
     padding: 1.5rem 2rem 2rem;
     background-color: var(--bg-secondary);
-    margin-bottom: 6em;
     position: relative;
     
     & h1, h2 {

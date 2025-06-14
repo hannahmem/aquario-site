@@ -18,7 +18,7 @@
 
 .action-call {
     margin-top: 1em;
-    align-self: flex-start;
+    /* align-self: flex-start; */
     display: flex;
     gap: 1rem;
 
@@ -31,5 +31,9 @@
     .insta-container {
         width: 75%;
         padding: 2rem 3rem;
+    }
+
+    .action-call {
+        align-self: flex-start;
     }
 }
