@@ -36,7 +36,7 @@
             flex-direction: column;
             justify-content: center;
             margin: .5rem;
-            padding: 3rem 3rem;
+            padding: 3rem 1.5rem;
         }
 
         & h2, span, p {
@@ -71,7 +71,7 @@
 
 @media (width > 49em) {
     .box-container {
-        grid-template-columns: 5fr 6fr;
+        grid-template-columns: 1fr 1fr;
     
         & .img-border {
             padding: 2rem;
@@ -100,7 +100,6 @@
     }
 
     .box-container {
-        /* display: flex; */
         grid-template-columns: 4fr 2fr;
         
         & .img-border {
@@ -116,6 +115,7 @@
         & .text-container > .text-border {
             min-height: 30rem;
             margin: 3rem;
+            padding: 3rem;
         }
     }
 
