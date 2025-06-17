@@ -23,42 +23,44 @@
         transform: translateX(-50%);
         z-index: -1;
     }
-}
 
-.slide-list {
-    height: 100%;
-    list-style: none;
-}
+    & .slide-list {
+        height: 100%;
+        list-style: none;
+    }
 
-.slides {
-    /* position: absolute; */
-    display: none;
-    width: 100%;
-
-    transition: display .9s ease-in-out;
-}
-
-li .slide-content-wrapper {
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: .25rem;
-
-
-    & img {
+    & .slides {
+        /* position: absolute; */
+        display: none;
         width: 100%;
+
+        transition: display .9s ease-in-out;
     }
 
-    & img:first-child {
-        padding: 1rem;
-        padding-bottom: 0;
-    }
+    & li .slide-content-wrapper {
+        width: 100%;
+        display: grid;
+        align-items: center;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: .25rem;
 
-    & img:last-child {
-        padding: 1rem;
-        padding-top: 0;
+
+        & img {
+            width: 100%;
+        }
+
+        & img:first-child {
+            padding: 1rem;
+            padding-bottom: 0;
+        }
+
+        & img:last-child {
+            padding: 1rem;
+            padding-top: 0;
+        }
     }
 }
+
 
 .slides[data-active] {
     display: block;
@@ -110,11 +112,37 @@ li .slide-content-wrapper {
     outline: 2px solid currentColor;
 }
 
+.slide-text-container {
+    color: var(--red-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 3em;
+    border: 2px solid white;
+    margin: 0 1rem 1rem;
+}
+
+.slide-text-container span {
+    margin-bottom: 1rem;
+}
+
 @media (width > 37.5em) {
     
     li .slide-content-wrapper {
         grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+        
+        & img {
+            padding: 1rem;
+            padding-bottom: 0;
+        }
     }
+    
+
+    /* .slide-text-container {
+        padding: 3rem;
+        margin: 1rem;
+    } */
 }
 
 @media (width > 49em) {
@@ -145,11 +173,17 @@ li .slide-content-wrapper {
         grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
 
         & img:first-child {
-            padding: 1.5rem 0 1.5rem 1.5rem;
+            padding: 1.5rem 0 1.5rem 2rem;
         }
 
         & img:last-child {
             padding: 1.5rem 1.5rem 1.5rem 0;
         }
+    }
+
+    .slide-text-container {
+        padding: 2rem 4rem;
+        margin: 1.5rem 1.5rem 1.5rem 0;
+        min-height: 70vh;
     }
 }

@@ -12,73 +12,72 @@
 <body>
     <header>
         <nav>
-            <div id="logo">
-                <a href="#home">
-                    <img src="src/assets/logo/logo.png" alt="logo">
-                </a>
-            </div>
-
-            <input id="sidebar-active" type="checkbox" aria-hidden="true" tabindex="-1">
-            <label for="sidebar-active" class="hamburger-menu" tabindex="0" role="button" aria-expanded="false" aria-label="Menu de navegação" aria-controls="sidebar">
-                <span class="sr-only"></span>
-                <span></span>
-            </label>
-            <label id="overlay" for="sidebar-active" tabindex="-1" aria-hidden="true"></label>
-
-            <div class="menu">
-                <!-- <form class="input-wrapper" role="search">
-                    <input id="search" type="search" placeholder="Buscar produto" aria-label="Buscar produto no site">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="#000000" fill="none">
-                        <path d="M17 17L21 21" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                        <path d="M19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19C15.4183 19 19 15.4183 19 11Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                    </svg>
-                </form> -->
-
-                <ul>
-                    <li>
-                        <a href="#home">home</a>
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="#000000" fill="none">
-                            <path d="M20.0001 11.9998L4.00012 11.9998" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                            <path d="M15.0003 17C15.0003 17 20.0002 13.3176 20.0002 12C20.0002 10.6824 15.0002 7 15.0002 7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                        </svg>
-                    </li>
-                    <li>
-                        <a href="#about">sobre</a>
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="#000000" fill="none">
-                            <path d="M20.0001 11.9998L4.00012 11.9998" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                            <path d="M15.0003 17C15.0003 17 20.0002 13.3176 20.0002 12C20.0002 10.6824 15.0002 7 15.0002 7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                        </svg>
-                    </li>
-                    <li>
-                        <a href="#aromatherapy">aromaterapia</a>
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="#000000" fill="none">
-                            <path d="M20.0001 11.9998L4.00012 11.9998" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                            <path d="M15.0003 17C15.0003 17 20.0002 13.3176 20.0002 12C20.0002 10.6824 15.0002 7 15.0002 7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                        </svg>
-                    </li>
-                    <li>
-                        <a href="#decoration">decoração</a>
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="#000000" fill="none">
-                            <path d="M20.0001 11.9998L4.00012 11.9998" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                            <path d="M15.0003 17C15.0003 17 20.0002 13.3176 20.0002 12C20.0002 10.6824 15.0002 7 15.0002 7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                        </svg>
-                    </li>
-                    <li>
-                        <a href="#clothes-and-accessories">roupas e acessórios</a>
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="#000000" fill="none">
-                            <path d="M20.0001 11.9998L4.00012 11.9998" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                            <path d="M15.0003 17C15.0003 17 20.0002 13.3176 20.0002 12C20.0002 10.6824 15.0002 7 15.0002 7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                        </svg>
-                    </li>
-                    <li>
-                        <a href="#contact">contato</a>
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="#000000" fill="none">
-                            <path d="M20.0001 11.9998L4.00012 11.9998" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                            <path d="M15.0003 17C15.0003 17 20.0002 13.3176 20.0002 12C20.0002 10.6824 15.0002 7 15.0002 7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                        </svg>
-                    </li>
+            <div class="flex-container">
+                <div id="logo">
+                    <a href="#home">
+                        <img src="src/assets/logo/logo.png" alt="logo">
+                    </a>
                 </div>
-            </ul>
+                <input id="sidebar-active" type="checkbox" aria-hidden="true" tabindex="-1">
+                <label for="sidebar-active" class="hamburger-menu" tabindex="0" role="button" aria-expanded="false" aria-label="Menu de navegação" aria-controls="sidebar">
+                    <span class="sr-only"></span>
+                    <span></span>
+                </label>
+                <label id="overlay" for="sidebar-active" tabindex="-1" aria-hidden="true"></label>
+                <div class="menu">
+                    <!-- <form class="input-wrapper" role="search">
+                        <input id="search" type="search" placeholder="Buscar produto" aria-label="Buscar produto no site">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="#000000" fill="none">
+                            <path d="M17 17L21 21" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19C15.4183 19 19 15.4183 19 11Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </form> -->
+                    <ul>
+                        <li>
+                            <a href="#home">home</a>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="#000000" fill="none">
+                                <path d="M20.0001 11.9998L4.00012 11.9998" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M15.0003 17C15.0003 17 20.0002 13.3176 20.0002 12C20.0002 10.6824 15.0002 7 15.0002 7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </li>
+                        <li>
+                            <a href="#about">sobre</a>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="#000000" fill="none">
+                                <path d="M20.0001 11.9998L4.00012 11.9998" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M15.0003 17C15.0003 17 20.0002 13.3176 20.0002 12C20.0002 10.6824 15.0002 7 15.0002 7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </li>
+                        <li>
+                            <a href="#aromatherapy">aromaterapia</a>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="#000000" fill="none">
+                                <path d="M20.0001 11.9998L4.00012 11.9998" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M15.0003 17C15.0003 17 20.0002 13.3176 20.0002 12C20.0002 10.6824 15.0002 7 15.0002 7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </li>
+                        <li>
+                            <a href="#decoration">decoração</a>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="#000000" fill="none">
+                                <path d="M20.0001 11.9998L4.00012 11.9998" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M15.0003 17C15.0003 17 20.0002 13.3176 20.0002 12C20.0002 10.6824 15.0002 7 15.0002 7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </li>
+                        <li>
+                            <a href="#clothes-and-accessories">roupas e acessórios</a>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="#000000" fill="none">
+                                <path d="M20.0001 11.9998L4.00012 11.9998" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M15.0003 17C15.0003 17 20.0002 13.3176 20.0002 12C20.0002 10.6824 15.0002 7 15.0002 7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </li>
+                        <li>
+                            <a href="#contact">contato</a>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="#000000" fill="none">
+                                <path d="M20.0001 11.9998L4.00012 11.9998" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M15.0003 17C15.0003 17 20.0002 13.3176 20.0002 12C20.0002 10.6824 15.0002 7 15.0002 7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </li>
+                    </div>
+                </ul>
+            </div>
         </nav>
     </header>
 
@@ -140,9 +139,9 @@
                     <img id="decoration-up" src="src/assets/page-decoration/tiffany-up.svg" alt="">
                     <div class="text-container">
                         <div class="text-border">
-                            <h2 class="red">luminárias tiffany</h2>
-                            <span class="subtitle red">encanto e elegância atemporal</span>
-                            <p class="red">Inspirados no estilo Art Nouveau, os abajures e luminárias Tiffany são verdadeiras obras de arte em vidro colorido. Cada peça é feita com atenção aos detalhes, criando efeitos de luz únicos que transformam qualquer ambiente. Com suas cúpulas de mosaico vítreo e bases ornamentadas, eles combinam charme clássico com sofisticação artesanal. Um toque de beleza, história e cor para sua casa.</p>
+                            <h2>luminárias tiffany</h2>
+                            <span class="subtitle">encanto e elegância atemporal</span>
+                            <p>Inspirados no estilo Art Nouveau, os abajures e luminárias em estilo Tiffany são verdadeiras obras de arte em vidro colorido. Cada peça é feita com atenção aos detalhes, criando efeitos de luz únicos que transformam qualquer ambiente. Com suas cúpulas de mosaico vítreo e bases ornamentadas, eles combinam charme clássico com sofisticação artesanal. Um toque de beleza, história e cor para sua casa.</p>
                         </div>
                     </div>
                     <img id="decoration-down2" src="src/assets/page-decoration/tiffany-down.svg" alt="">
@@ -202,7 +201,12 @@
                         <li class="slides" data-active>
                             <div class="slide-content-wrapper">
                                 <img src="src/assets/banners/lavanda-quadriculado.png" alt="Aromatizador de ambiente com aroma de alecrim.">
-                                <img src="src/assets/banners/lavanda-text.png" alt="">
+                                <!-- <img src="src/assets/banners/lavanda-text.png" alt=""> -->
+                                 <div class="slide-text-container">
+                                    <h2>lavanda</h2>
+                                    <span class="subtitle">equilíbrio que perfuma, acalma e transforma</span>
+                                    <p>Com seu aroma envolvente e sereno, a lavanda é mais do que um perfume familiar, um convite ao bem-estar. Ela é conhecida por acalmar a mente, aliviar tensões e ajudar no sono tranquilo. É o toque que abraça o emocional, aliviando o que pesa e trazendo leveza. É chamada de “coringa” da aromaterapia pois atua onde for preciso, suavemente, como quem cuida com delicadeza.</p>
+                                </div>
                             </div>
                         </li>
                         <li class="slides">

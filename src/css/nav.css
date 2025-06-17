@@ -1,22 +1,34 @@
 nav {
-    display: flex;
-    justify-content: space-between;
-    padding: 1em 1.5em;
     position: fixed;
     background-color: var(--bg-primary);
-    box-shadow: var(--box-shadow);
     width: 100%;
     top: 0;
     z-index: 11;
+    
+    animation: customNav linear forwards;
+    animation-timeline: view();
+    animation-range-start: 110vh;
+}
+
+.flex-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5em;
 }
 
 #logo {
-    margin: 0 auto;
+    margin: 0 auto .5rem;
     opacity: 1;
     transition: opacity .3s ease;
     
     & img {
         width: 9rem;
+
+        animation: customLogoMob linear forwards;
+        animation-timeline: view();
+        animation-range-start: 110vh;
+        animation-range-end: 125vh;
     }
 }
 
@@ -38,7 +50,7 @@ nav {
 
     position: fixed;
     left: -100%;
-    top: 5rem;
+    top: 5.5rem;
     z-index: 9;
 
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
@@ -147,15 +159,25 @@ form svg path {
 /* desktop version */
 
 @media (width > 56em) {
-    nav {
-        padding: 2em 3em;
+    .flex-container {
+        padding: 1em 3em;
+
+        animation: customPad linear forwards;
+        animation-timeline: view();
+        animation-range-start: 110vh;
+        animation-range-end: 125vh;
     }
 
     #logo {
-        margin: 0;
+        margin: 0 0 1rem;
 
         & img {
             width: 12rem;
+
+            animation: customLogoDesk linear forwards;
+            animation-timeline: view();
+            animation-range-start: 110vh;
+            animation-range-end: 125vh;
         }
     }
 
@@ -208,5 +230,29 @@ form svg path {
 
     .input-wrapper:is(:hover, :focus-within) #search {
         width: 10rem;
+    }
+}
+
+@keyframes customNav {
+    100% {
+        box-shadow: var(--box-shadow);
+    }
+}
+
+@keyframes customLogoMob {
+    100% {
+        width: 8rem;
+    }
+}
+
+@keyframes customLogoDesk {
+    100% {
+        width: 10rem;
+    }
+}
+
+@keyframes customPad {
+    100% {
+        padding: .5em 3em;
     }
 }
