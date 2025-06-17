@@ -112,3 +112,160 @@
         width: 25em;
     }
 }
+
+
+/* images container */
+
+.img-wrapper {
+    width: 100%;
+    position: relative;
+    background-color: var(--bg-terciary);
+    margin: 5.5em 0 5em;
+
+    & #decoration-top {
+        width: 20em;
+        position: absolute;
+        top: -80px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: -1;
+    }
+
+    & #decoration-bottom {
+        width: 20em;
+        position: absolute;
+        bottom: -80px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: -1;
+    }
+}
+
+.slide-list {
+    height: 100%;
+    list-style: none;
+}
+
+.slides {
+    /* position: absolute; */
+    display: none;
+    width: 100%;
+
+    transition: display .9s ease-in-out;
+}
+
+li .slide-content-wrapper {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: .25rem;
+
+
+    & img {
+        width: 100%;
+    }
+
+    & img:first-child {
+        padding: 1rem;
+        padding-bottom: 0;
+    }
+
+    & img:last-child {
+        padding: 1rem;
+        padding-top: 0;
+    }
+}
+
+.slides[data-active] {
+    display: block;
+}
+
+/* arrow buttons */
+
+#arrow-right,
+#arrow-left {
+    border: none;
+    background: none;
+    /* margin-top: 40em; */
+    cursor: pointer;
+    
+    outline: 2px solid transparent;
+
+    & svg path {
+        stroke: var(--text-transparent);
+        transition: stroke .3s ease;
+    }
+}
+
+.btn-wrapper {
+    width: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    bottom: 1.5%;
+    transform: translateY(-50%);
+    z-index: 10;
+}
+
+#arrow-right {
+    margin-right: 2rem;
+}
+
+#arrow-left {
+    margin-left: 2rem;
+}
+
+#arrow-left:is(:hover, :focus-visible) > svg path,
+#arrow-right:is(:hover, :focus-visible) > svg path {
+    stroke: var(--text-primary);
+}
+
+#arrow-left:focus-visible, 
+#arrow-right:focus-visible {
+    outline: 2px solid currentColor;
+}
+
+@media (width > 37.5em) {
+    
+    li .slide-content-wrapper {
+        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    }
+}
+
+@media (width > 49em) {
+    #highlights-2 {
+        padding: 0 1.5rem;
+    }
+    .img-wrapper {
+        margin: 9em 0;
+
+        & #decoration-top {
+        width: 30em;
+        top: -100px;
+    }
+
+        & #decoration-bottom {
+            width: 30em;
+            bottom: -100px;
+        }
+    }
+
+    .btn-wrapper {
+        justify-content: space-between;
+        top: 50%;
+        gap: 0;
+    }
+
+    li .slide-content-wrapper {
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+
+        & img:first-child {
+            padding: 1.5rem 0 1.5rem 1.5rem;
+        }
+
+        & img:last-child {
+            padding: 1.5rem 1.5rem 1.5rem 0;
+        }
+    }
+}
