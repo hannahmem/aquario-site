@@ -30,6 +30,11 @@
     }
     
     & .text-container {
+        padding: 1em;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
         width: 100%;
         border-bottom: 1px solid var(--bg-secondary);
 
@@ -39,6 +44,7 @@
             justify-content: center;
             margin: .5rem;
             padding: 3rem 1.5rem;
+            border: 2px solid var(--bg-primary);
         }
 
         & h2, span, p {
@@ -52,6 +58,7 @@
 
         & p {
             margin-top: 1rem;
+            font: var(--text-md-darker);
         }
     }
 }
@@ -140,7 +147,7 @@
         & .text-container > .text-border {
             min-height: 30rem;
             margin: 3rem;
-            padding: 3rem;
+            padding: 3rem 5rem;
         }
     }
 

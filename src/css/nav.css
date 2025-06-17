@@ -153,6 +153,10 @@ form svg path {
 
     #logo {
         margin: 0;
+
+        & img {
+            width: 12rem;
+        }
     }
 
     #logo:has(~ .menu .input-wrapper:is(:hover, :focus-within) #search) {

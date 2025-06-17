@@ -109,14 +109,14 @@ input[type="radio"] {
 @media (width > 49em) {
     .banner-container {
         margin: 6em 0 3em;
-    }
-
-    .banner-desktop-container {
-        width: 100%;
 
         & img {
             width: 100%;
         }
+    }
+
+    .banner-desktop-container {
+        width: 100%;
     }
 
     .desktop {

@@ -7,6 +7,7 @@
 :root {
     --ff: 'Larken', sans-serif;
     --text-sm: 100 .85rem/1.25 var(--ff);
+    --text-regular: 100 1rem/1.25 var(--ff);
     --text-md: 100 1.25rem/1.25 var(--ff);
     --text-md-darker: 300 1.25rem/1.25 var(--ff);
     --text-ital: italic 1.25rem/1.25 var(--ff);
@@ -15,12 +16,15 @@
     --text-h2-thin: 200 1.5rem/1.25 var(--ff); 
     --text-h3: 100 1.4rem/1.25 var(--ff);
     --text-xl: 400 3.5rem/1.5 var(--ff);
+    --text-xl-thin: 200 3.5rem/1.5 var(--ff);
     --text-xl-mob: 400 2.25rem/1.25 var(--ff);
+    --text-xl-mob-thin: 200 2.25rem/1.25 var(--ff);
     
     --text-primary: #000;
     --text-transparent: #0000004e;
     --bg-primary: #fff;
     --bg-secondary: #fff1e5;
+    --bg-terciary: #f8d8c8;
     --red-color: #540018;
     --yellow-color: #faaf40; 
     --link-hover: #F4C430;
@@ -48,6 +52,10 @@ a {
     text-decoration: none;
     color: black;
     font: var(--text-md);
+}
+
+ul {
+    list-style: none;
 }
 
 h1 {

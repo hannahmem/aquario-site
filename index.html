@@ -195,34 +195,40 @@
         </section>
 
         <section id="highlights-2">
-            <div class="highlights-decoration-top"></div>
-            <div class="grid-container">
                 <div class="img-wrapper" aria-label="Slide de fotos" data-carousel>
+                    <img id="decoration-top" src="src/assets/page-decoration/destaques-up.png" alt="">
                     <ul class="slide-list" data-slides>
-                        <li class="slides" data-active><img src="src/assets/photos/floresta-verde/difusor.png" alt="Aromatizador de ambiente com aroma de alecrim."></li>
-                        <li class="slides"><img src="src/assets/photos/floresta-verde/difusor_com_varetas.png" alt="Difusor de aroma de pétalas frescas com varetas."></li>
-                        <li class="slides"><img src="src/assets/photos/floresta-verde/sachê.png" alt="Sachê perfumado com aroma de pétalas frescas."></li>
-                        <li class="slides"><img src="src/assets/photos/floresta-verde/spray.png" alt="Spray aromatizante com aroma de pétalas frescas."></li>
-                        <li class="slides"><img src="src/assets/photos/floresta-verde/vela.png" alt="Vela perfumada com aroma de canela com mel."></li>
-                        <li class="slides"><img src="src/assets/photos/floresta-verde/água-de-passar.png" alt="Spray de água de passar roupa com aroma de lavanda."></li>
+                        <!-- <li class="slides" ><img src="src/assets/banners/banner_floresta_verde_banner_4gif.gif" alt="Spray aromatizante com aroma de pétalas frescas."></li> -->
+                        <li class="slides" data-active>
+                            <div class="slide-content-wrapper">
+                                <img src="src/assets/banners/lavanda-quadriculado.png" alt="Aromatizador de ambiente com aroma de alecrim.">
+                                <img src="src/assets/banners/lavanda-text.png" alt="">
+                            </div>
+                        </li>
+                        <li class="slides">
+                            <div class="slide-content-wrapper">
+                                <img src="src/assets/banners/quadriculado_produtos_alecrim.PNG" alt="Aromatizador de ambiente com aroma de alecrim.">
+                                <img src="src/assets/banners/alecrim-text.png" alt="">
+                            </div></li>
+                        <li class="slides">
+                            <div class="slide-content-wrapper">
+                                <img src="src/assets/banners/quadriculado_produtos_petalas_frescas.PNG" alt="Aromatizador de ambiente com aroma de alecrim.">
+                                <img src="src/assets/banners/petalas-frescas-text.png" alt="">
+                            </div>
+                        </li>
+                        
                     </ul>
-
-                    <button id="arrow-left" type="button" data-carousel-button="prev" aria-label="Imagem anterior">
-                        <?xml version="1.0" encoding="UTF-8"?><svg width="28px" height="28px" stroke-width="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" color="#000000"><path d="M16 12H8M8 12L11.5 15.5M8 12L11.5 8.5" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
-                    </button>
-                    <button id="arrow-right" type="button" data-carousel-button="next" aria-label="Imagem seguinte">
-                        <?xml version="1.0" encoding="UTF-8"?><svg width="28px" height="28px" stroke-width="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" color="#000000"><path d="M8 12H16M16 12L12.5 8.5M16 12L12.5 15.5" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
-                    </button>
-                </div>
-
-                <div class="text-container">
-                    <div class="text-border">
-                        <h2 class="red">floresta verde</h2>
-                        <p class="red">Transforme sua casa em um refúgio de bem-estar com os aromas da Floresta Verde. Aromatizadores de ambiente, spray aromatizador, sabonete líquido, águas de passar e sachês tudo para perfumar com suavidade e trazer equilíbrio para o seu dia a dia. Cada fragrância desperta sensações únicas, acolhendo corpo e mente com conforto e frescor. Um cuidado que começa no ar e se espalha por todos os cantinhos da sua rotina.</p>
+                        
+                        <div class="btn-wrapper">
+                            <button id="arrow-left" type="button" data-carousel-button="prev" aria-label="Imagem anterior">
+                                <?xml version="1.0" encoding="UTF-8"?><svg width="28px" height="28px" stroke-width="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" color="#000000"><path d="M16 12H8M8 12L11.5 15.5M8 12L11.5 8.5" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                            </button>
+                            <button id="arrow-right" type="button" data-carousel-button="next" aria-label="Imagem seguinte">
+                                <?xml version="1.0" encoding="UTF-8"?><svg width="28px" height="28px" stroke-width="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" color="#000000"><path d="M8 12H16M16 12L12.5 8.5M16 12L12.5 15.5" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                            </button>
+                        </div>
+                        <img id="decoration-bottom" src="src/assets/page-decoration/destaques-down.png" alt="">
                     </div>
-                </div>
-            </div>
-            <div class="highlights-decoration-bottom"></div>
         </section>
 
         <section id="banner-clothes-and-accessories" class="banner-container">
