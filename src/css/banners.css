@@ -22,38 +22,7 @@
     display: none;
 }
 
-.slider-wrapper {
-    width: 100%;
-    position: relative;
-    max-width: 48rem;
-    margin: 0 auto;
-    border-radius: 0.5rem;
-    overflow-x: hidden;
-}
 
-.slider {
-    margin-top: 5rem;
-    display: flex;
-    margin-bottom: 1rem;
-
-    box-shadow: var(--box-shadow);
-
-    animation: slide 16s infinite;
-}
-
-.slider img {
-    flex: 1 0 100%;
-    width: 100%;
-    object-fit: contain;
-}
-
-.slider-nav {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-    margin-bottom: 2rem;
-}
 
 .carousel-nav {
     display: flex;
@@ -107,18 +76,6 @@ input[type="radio"] {
 
 
 @media (width > 49em) {
-    .banner-container {
-        margin: 6em 0 3em;
-
-        & img {
-            width: 100%;
-        }
-    }
-
-    .banner-desktop-container {
-        width: 100%;
-    }
-
     .desktop {
         display: block;
     }
@@ -139,50 +96,4 @@ input[type="radio"] {
     }
 }
 
-@keyframes slide {
-    0% {
-        transform: translateX(0);
-    }
 
-    30% {
-        transform: translateX(0);
-    }
-
-    35% {
-        transform: translateX(-100%);
-    }
-
-    60% {
-        transform: translateX(-100%);
-    }
-
-    65% {
-        transform: translateX(-200%);
-    }
-
-    90% {
-        transform: translateX(-200%);
-    }
-
-    100% {
-        transform: translateX(0);
-    }
-}
-
-@keyframes changeImg {
-    0% {
-        background-image: url(../assets/banners/banner-decoracao-mobile_1.png);
-    }
-
-    33% {
-        background-image: url(../assets/banners/banner-decoracao-mobile_2.png);
-    }
-
-    66% {
-        background-image: url(../assets/banners/banner-decoracao-mobile_3.png);
-    }
-
-    100% {
-        background-image: url(../assets/banners/banner-decoracao-mobile_1.png);
-    }
-}

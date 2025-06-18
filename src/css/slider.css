@@ -1,0 +1,142 @@
+.slider-desktop {
+    display: none;
+}
+
+.navigation {
+  position: absolute;
+  bottom: 45px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 15px;
+  z-index: 10;
+}
+
+.nav-btn {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #4683b4e8;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#slide1:checked ~ .slides-desktop {
+    animation: none;
+    transform: translateX(0);
+}
+#slide2:checked ~ .slides-desktop {
+    animation: none;
+    transform: translateX(-100vw);
+}
+#slide3:checked ~ .slides-desktop {
+    animation: none;
+    transform: translateX(-200vw);
+}
+
+#slide1:checked ~ .navigation .nav-btn:nth-child(1),
+#slide2:checked ~ .navigation .nav-btn:nth-child(2),
+#slide3:checked ~ .navigation .nav-btn:nth-child(3) {
+  background-color: #4682B4;
+  transform: scale(1.2);
+}
+
+input[type="radio"] {
+  opacity: 0;
+}
+
+.slider-desktop:hover .slides-desktop {
+    animation-play-state: paused;
+}
+
+/* mobile */
+
+.slider-wrapper {
+    width: 100dvw;
+    position: relative;
+    max-width: 48rem;
+    margin: 0 auto;
+    border-radius: 0.5rem;
+    overflow-x: hidden;
+}
+
+.slider {
+    margin-top: 5rem;
+    display: flex;
+    margin-bottom: 1rem;
+
+    box-shadow: var(--box-shadow);
+
+    animation: slide 16s infinite;
+}
+
+.slider img {
+    flex: 1 0 100%;
+    width: 100%;
+    object-fit: contain;
+}
+
+.slider-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+@media (width > 52em) {
+    .slider-desktop {
+        display: block;
+        position: relative;
+        width: 100vw;
+        height: 100%;
+        overflow: hidden;
+        margin: 1rem 0;
+    }
+
+    .slides-desktop {
+        display: flex;
+        width: 300vw;
+        height: 100vh;
+        transition: transform 0.6s linear;
+
+        animation: slide 16s infinite;
+    }
+
+    .slide-desktop {
+        width: 100vw;
+        height: 100vh;
+        object-fit: contain;
+        flex-shrink: 0;
+    }
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+
+    30% {
+        transform: translateX(0);
+    }
+
+    35% {
+        transform: translateX(-100vw);
+    }
+
+    60% {
+        transform: translateX(-100vw);
+    }
+
+    65% {
+        transform: translateX(-200vw);
+    }
+
+    90% {
+        transform: translateX(-200vw);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}

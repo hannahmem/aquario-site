@@ -38,6 +38,7 @@
     --animation-timing: .4s ease-in-out;
     --hamburger-height: calc(var(--bar-height) * 3 + var(--hamburger-gap) * 2);
 
+    --sidebar-height: 4.8rem;
     --section-margin: 3rem;
     --gap: 1rem;
 }

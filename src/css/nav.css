@@ -4,17 +4,17 @@ nav {
     width: 100%;
     top: 0;
     z-index: 11;
+    
+    animation: customNav linear forwards;
+    animation-timeline: view();
+    animation-range-start: 110vh;
 }
 
 .flex-container {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 5rem;
-
-    animation: customNav linear forwards;
-    animation-timeline: view();
-    animation-range-start: 110vh;
+    padding: .75rem 0;
 }
 
 #logo {
@@ -23,7 +23,7 @@ nav {
     & img {
         width: 9rem;
 
-        animation: customLogoMob linear forwards;
+        animation: customLogo linear forwards;
         animation-timeline: view();
         animation-range-start: 110vh;
         animation-range-end: 125vh;
@@ -44,7 +44,7 @@ nav {
 
     position: fixed;
     left: -100%;
-    top: 5rem;
+    top: var(--sidebar-height);
     z-index: 9;
 
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
@@ -140,7 +140,7 @@ form svg path {
 
 @media (width > 56em) {
     .flex-container {
-        padding: 1em 3em;
+        padding: .5em 3em;
         height: auto;
     }
 
@@ -148,12 +148,7 @@ form svg path {
         margin: 0 0 .5rem;
         
         & img {
-            width: 12rem;
-
-            animation: customLogoDesk linear forwards;
-            animation-timeline: view();
-            animation-range-start: 110vh;
-            animation-range-end: 125vh;
+            width: 11rem;
         }
     }
 
@@ -215,14 +210,8 @@ form svg path {
     }
 }
 
-@keyframes customLogoMob {
+@keyframes customLogo {
     100% {
-        width: 8rem;
-    }
-}
-
-@keyframes customLogoDesk {
-    100% {
-        width: 10rem;
+        scale: .8;
     }
 }
