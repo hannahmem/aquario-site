@@ -8,44 +8,47 @@
 }
 
 .box-container {
+    margin: 0 auto;
+    width: 100%;
     background-color: var(--red-color);
-    display: grid;
-    grid-template-rows: 1fr;
-    align-items: center;
-    justify-content: center;
 
-    & .img-border {
-        padding: 0 1.5rem 1.5rem;
-        width: 100%;
+    & .img-container {
+        width: fit-content;
         position: relative;
+        flex-basis: 100%;
+        /* border: 1px solid red; */
         
-        & .slide-list {
-            margin: 0 auto;
-        }
         
         & li img {
-            border: 2px solid var(--bg-secondary);
+            /* border: 2px solid var(--bg-secondary); */
             width: 100%;
         }
     }
     
-    & .text-container {
+    & .content-container {
         padding: 1em;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
         width: 100%;
-
+        color: var(--bg-secondary);
+        
+        
+        & .container-border {
+            --desktop-gap: 3rem;
+            --mobile-gap: 1.5rem;
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            gap: var(--mobile-gap);
+            /* padding: 1.5rem; */
+            border: 2px solid var(--bg-primary);
+        }
 
         & .text-border {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            margin: .5rem .5rem 0;
-            padding: 3rem;
-            border: 2px solid var(--bg-primary);
-            color: var(--bg-secondary);
+            width: 100%;
+            flex-basis: 100%;
+            padding: 1.5rem;
         }
 
         & h2, span, p {
@@ -70,11 +73,12 @@
 
 }
 
-#decoration-up {
+#decoration-up1 {
     width: 18em;
     z-index: -1;
     position: absolute;
     top: -5rem;
+    align-self: center;
 }
 
 #decoration-down1 {
@@ -82,6 +86,10 @@
     bottom: -5rem;
     position: absolute;
     z-index: -1;
+}
+
+#decoration-up2 {
+    display: none;
 }
 
 #decoration-down2 {
@@ -93,28 +101,34 @@
         padding: 0 1.5rem;
         margin: 10em 0;
     }
-    
-    .box-container {
-        grid-template-columns: 1fr 1fr;
-    
-        & .img-border {
-            padding: 2rem;
-            padding-right: 1rem;
 
-            & .slide-list {
-                padding-right: 1rem;
-            }
+    .box-container {
+
+        & .img-container {
+            flex-basis: 50%;
+            /* padding: 1.5rem; */
+            /* padding-left: 0; */
         }
         
-        & .text-container {
-            border-bottom: none;
-            padding: 0;
+        & .content-container {
 
             & .text-border {
-                margin: 2rem;
-                margin-right: 0;
+                flex-basis: calc(50% - var(--mobile-gap));
+                padding: 1.5rem;
             }
         }
+    }
+
+    #decoration-up1 {
+        display: none;
+    }
+
+    #decoration-up2 {
+        width: 18em;
+        z-index: -1;
+        position: absolute;
+        top: -5rem;
+        align-self: center;
     }
 
     #decoration-down1 {
@@ -131,32 +145,35 @@
 }
 
 @media (width > 72em) {
-    #highlights-1 {
+     #highlights-1 {
         padding: 0 3rem;
-        margin: 10em 0;
     }
 
     .box-container {
-        grid-template-columns: 4fr 2fr;
-        
-        & .img-border {
-            flex: 0;
-            width: 100%;
-            padding: 3rem 2rem 2.8rem 0;
-            
-            & .slide-list {
-                width: 500px;
-            }
+        & .img-container {
+            flex-basis: 40%;
+            /* padding: 0; */
         }
 
-        & .text-container > .text-border {
-            min-height: 30rem;
-            margin: 3rem;
-            padding: 3rem 5rem;
+        & .content-container {
+            padding: 3em;
+
+            & .text-border {
+                flex-basis: calc(60% - var(--mobile-gap));
+                padding: 2rem 4rem;
+
+                & h2 {
+                    font: var(--text-h2-desk);
+                }
+
+                & p {
+                    font: var(--text-lg);
+                }
+            }
         }
     }
 
-    #decoration-up {
+    #decoration-up2 {
         width: 25em;
         top: -7.1875rem;
     }

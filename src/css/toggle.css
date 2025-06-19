@@ -7,7 +7,7 @@
 
 #toggle-btn + label {
     position: absolute;
-    bottom: 8%;
+    bottom: 2%;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
@@ -76,9 +76,9 @@
     display: block;
 }
 
-@media (width > 72em) {
+/* @media (width > 72em) {
     #toggle-btn + label {
         bottom: 11%;
         left: 45%;
     }
-}
+} */
