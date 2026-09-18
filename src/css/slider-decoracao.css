@@ -51,6 +51,7 @@
 
         & .slides-mobile {
             display: flex;
+            transition: transform ease 1s;
         }
 
         & .slides-mobile img {
@@ -66,8 +67,14 @@
         }
 
         & button {
+            width: 35px;
+            height: 35px;
+            border: none;
+            border-radius: 50%;
             background-color: rgba(7, 7, 7, 0.685);
             color: white;
+            transition: ease .3s;
+
         }
         
         & button:hover {
