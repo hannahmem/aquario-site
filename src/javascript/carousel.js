@@ -19,6 +19,138 @@ buttons.forEach(button => {
     })
 })
 
+// Banners carousel decoration desktop
+
+const container = document.querySelector('.banner-carousel')
+const slides = document.querySelector('.slides')
+const btnLeft = document.querySelector('.left-arrow')
+const btnRight = document.querySelector('.right-arrow')
+const images = document.querySelectorAll('.banner-carousel .slides img')
+
+const imagesLen = images.length
+
+let index = 0
+let timer = null
+
+btnLeft.addEventListener('click', () => {
+    index--;
+    if (index < 0) {
+        index = imagesLen - 1
+    }
+    changeImage()
+})
+
+btnRight.addEventListener('click', () => {
+    increaseIndex()
+    changeImage()
+
+})
+
+const changeImage = () => {
+    slides.style.transform = `translateX(${index * -100}%)`
+    slidesMob.style.transform = `translateX(${index * -100}%)`
+}
+
+const increaseIndex = () => {
+    index++
+    if (index > 2) {
+        index = 0
+    }
+}
+
+const startAutoplay = () => {
+    if (timer) return
+    timer = setInterval(() => {
+        increaseIndex()
+        changeImage()
+    }, 4000);
+}
+
+const stopAutoplay = () => {
+    clearInterval(timer)
+    timer = null
+}
+
+container.addEventListener('mouseenter', stopAutoplay)
+container.addEventListener('mouseleave', startAutoplay)
+
+// banner decoration mobile 
+const slidesMob = document.querySelector('.slides-mobile')
+const containerMob = document.querySelector('.banner-carousel-mobile')
+const imagesMobile = document.querySelectorAll('.slides-mobile img')
+const btnLeftMob = document.querySelector('.left-arrow-mobile')
+const btnRightMob = document.querySelector('.right-arrow-mobile')
+
+const imagesMobLen = imagesMobile.length
+
+btnLeftMob.addEventListener('click', () => {
+    index--;
+    if (index < 0) index = imagesMobLen - 1 
+    changeImage()
+})
+
+btnRightMob.addEventListener('click', () => {
+    increaseIndex()
+    changeImage()
+
+})
+
+containerMob.addEventListener('mouseenter', stopAutoplay)
+containerMob.addEventListener('mouseleave', startAutoplay)
+
+startAutoplay()
+
+// Banner Kailash carousel
+const containerKai = document.querySelector('.banner-carousel-kailash')
+const slidesKai = document.querySelector('.slides-kailash')
+const btnLeftKai = document.querySelector('.left-arrow-kailash')
+const btnRightKai = document.querySelector('.right-arrow-kailash')
+
+let indexKai = 0
+let timerKai = null
+
+btnLeftKai.addEventListener('click', () => {
+    indexKai--;
+    if (indexKai < 0) indexKai = 1 
+    changeBannerKai()
+})
+
+btnRightKai.addEventListener('click', () => {
+    increaseIndexKai()
+    changeBannerKai()
+
+})
+
+const changeBannerKai = () => {
+    slidesKai.style.transform = `translateX(${indexKai * -100}%)`
+}
+
+const increaseIndexKai = () => {
+    indexKai++
+    if (indexKai > 1) indexKai = 0
+}
+
+// autoplay kailash
+const startAutoplayKai = () => {
+    if (timerKai) return
+    timerKai = setInterval(() => {
+        increaseIndexKai()
+        changeBannerKai()
+    }, 4000);
+}
+
+const stopAutoplayKai = () => {
+    clearInterval(timerKai)
+    timerKai = null
+}
+
+containerKai.addEventListener('mouseenter', startAutoplayKai)
+containerKai.addEventListener('mouseleave', stopAutoplayKai)
+
+startAutoplayKai()
+
+
+
 // dotsNav.forEach((dot, index) => {
 //     dot.addEventListener("click", () => {
 //         console.log(`Dot ${index} clicado!`);

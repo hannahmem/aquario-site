@@ -147,7 +147,7 @@
     }
 
     li .slide-content-wrapper {        
-        grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+        grid-template-columns: 6fr 5fr;
         gap: 1rem;
     }
 
@@ -192,6 +192,7 @@
 
         & .slide-text-container {
             min-height: 400px;
+            padding: 3rem;
 
             & h2 {
                 font: var(--text-h2-desk);

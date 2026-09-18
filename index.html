@@ -83,39 +83,31 @@
 
     <main id="home">
         <section id="banner-decoracao" class="banner-container" aria-labelledby="banner-heading">
-            <div class="slider-desktop">
-                <input type="radio" name="slide" id="slide1">
-                <input type="radio" name="slide" id="slide2">
-                <input type="radio" name="slide" id="slide3">
-
-                <div class="slides-desktop">
-                    <img class="slide-desktop" src="src/assets/banners/banner_decoracao_desktop_banner_1.png" alt="Uma estatueta do Buda meditando como objeto de decoração, luminárias da marca Tiffany suspendidas, um sofá com almofadas coloridas e uma mesa de centro redonda com objetos de decoração. Texto sobre a imagem: Decoração que abraça. Texturas, formas e cores para renovar sua casa.">
-                    <img class="slide-desktop" src="src/assets/banners/banner_decoracao_desktop_banner_2.png" alt="">
-                    <img class="slide-desktop" src="src/assets/banners/banner_decoracao_desktop_banner_3.png" alt="">
+            <div class="banner-carousel">
+                <div class="slides">
+                    <img src="src/assets/banners/banner_decoracao_desktop_banner_1.png" alt="Uma estatueta do Buda meditando como objeto de decoração, luminárias da marca Tiffany suspendidas, um sofá com almofadas coloridas e uma mesa de centro redonda com objetos de decoração. Texto sobre a imagem: Decoração que abraça. Texturas, formas e cores para renovar sua casa.">
+                    <img src="src/assets/banners/banner_decoracao_desktop_banner_2.png" alt="">
+                    <img src="src/assets/banners/banner_decoracao_desktop_banner_3.png" alt="">
                 </div>
 
-                <div class="navigation">
-                    <label for="slide1" class="nav-btn"></label>
-                    <label for="slide2" class="nav-btn"></label>
-                    <label for="slide3" class="nav-btn"></label>
-                </div>
+                <button class="left-arrow">&#10094;</button>
+                <button class="right-arrow">&#10095;</button>
             </div>
             <!-- <div class="banner-mobile" role="img">
                 <h2 id="banner-heading" class="sr-only">Decoração que abraça</h2>
                 <span id="banner-mobile" class="sr-only">Texturas, formas e cores para renovar sua casa.</span>
             </div> -->
             
-            <div class="slider-wrapper">
-                <div class="slider">
-                    <img class="slide-mobile active" src="src/assets/banners/banner-decoracao-mobile_1.png" alt="">
-                    <img class="slide-mobile" src="src/assets/banners/banner-decoracao-mobile_2.png" alt="">
-                    <img class="slide-mobile" src="src/assets/banners/banner-decoracao-mobile_3.png" alt="">
+            <div class="banner-carousel-mobile">
+                <div class="slides-mobile">
+                    <img src="src/assets/banners/banner-decoracao-mobile_1.png" alt="">
+                    <img src="src/assets/banners/banner-decoracao-mobile_2.png" alt="">
+                    <img src="src/assets/banners/banner-decoracao-mobile_3.png" alt="">
                 </div>
-                
-                <div class="slider-nav">
-                    <button type="button" class="carousel-button active"></button>
-                    <button type="button" class="carousel-button"></button>
-                    <button type="button" class="carousel-button"></button>
+
+                <div class="carousel-btn-wrapper">
+                    <button class="left-arrow-mobile">&#10094;</button>
+                    <button class="right-arrow-mobile">&#10095;</button>
                 </div>
             </div>
         </section>
@@ -302,32 +294,27 @@
         </section>
 
         <section id="banner-kailash">
-            <div class="img-wrapper-kailash">
-                <img src="src/assets/banners/banner_destaque_aomaterapia_kailash_mobile_banner-1.png" alt="">
-                <div class="text-container-kailash">
-                    <div class="text-border-kailash">
-                        <img id="logo-kailash" src="src/assets/logo/logo-kailash.svg" alt="Logo Kailash">
-                        <h2>flor de figo</h2>
-                        <p>A coleção Flor de Figo convida você a viver uma experiência sensorial única — delicada, marcante e cheia de personalidade.</p>
+            <div class="banner-carousel-kailash">
+                <div class="slides-kailash">
+                    <div class="img-wrapper-kailash">
+                        <img src="src/assets/banners/banner_destaque_aomaterapia_kailash_mobile_banner-1.png" alt="">
+                        <div class="text-container-kailash">
+                            <div class="text-border-kailash">
+                                <img id="logo-kailash" src="src/assets/logo/logo-kailash.svg" alt="Logo Kailash">
+                                <h2>flor de figo</h2>
+                                <p>A coleção Flor de Figo convida você a viver uma experiência sensorial única — delicada, marcante e cheia de personalidade.</p>
+                            </div>
+                        </div>
+                        <img src="src/assets/banners/banner_destaque_aomaterapia_kailash_mobile_banner-3.png" alt="">
+                    </div>
+                    
+                    <div class="slides-desktop-kailash">
+                        <img src="src/assets/banners/banner_destaque_aromaterapia_kailash.png" alt="Uma estatueta do Buda meditando como objeto de decoração, luminárias da marca Tiffany suspendidas, um sofá com almofadas coloridas e uma mesa de centro redonda com objetos de decoração. Texto sobre a imagem: Decoração que abraça. Texturas, formas e cores para renovar sua casa.">
+                        <img src="src/assets/banners/banner_destaque_aromaterapia_kailash_2.png" alt="">
                     </div>
                 </div>
-                <img src="src/assets/banners/banner_destaque_aomaterapia_kailash_mobile_banner-3.png" alt="">
-            </div>
-                
-            <div class="kailash-desktop">
-                <div class="slider-desktop-kailash">
-                <input type="radio" name="slide" id="slide1-kailash">
-                <input type="radio" name="slide" id="slide2-kailash">
-
-                <div class="slides-desktop-kailash">
-                    <img class="slide-desktop-kailash" src="src/assets/banners/banner_destaque_aromaterapia_kailash.png" alt="Uma estatueta do Buda meditando como objeto de decoração, luminárias da marca Tiffany suspendidas, um sofá com almofadas coloridas e uma mesa de centro redonda com objetos de decoração. Texto sobre a imagem: Decoração que abraça. Texturas, formas e cores para renovar sua casa.">
-                    <img class="slide-desktop-kailash" src="src/assets/banners/banner_destaque_aromaterapia_kailash_2.png" alt="">
-                </div>
-
-                <div class="nav-kailash">
-                    <label for="slide1-kailash" class="nav-btn-kailash"></label>
-                    <label for="slide2-kailash" class="nav-btn-kailash"></label>
-                </div>
+                <button class="left-arrow-kailash">&#10094;</button>
+                <button class="right-arrow-kailash">&#10095;</button>
             </div>
         </section>
             
