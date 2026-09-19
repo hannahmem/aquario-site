@@ -3,19 +3,20 @@
 }
 
 .banner-carousel {
-    max-width: 100%;
+    width: 100%;
     position: relative;
     overflow: hidden;
+    margin-top: 4rem;
+    margin-bottom: 3rem;
 
     & .slides {
         display: flex;
-        height: 90vh;
+        height: max-content;
         transition: transform ease 1s;
     }
     
     & .slides img {
         width: 100%;
-        object-fit: contain;
     }
     
     & button {
@@ -95,4 +96,19 @@
     .banner-carousel {
         display: none;
     }
+}
+
+@media (52em < width < 1040px) {
+    .banner-carousel {
+
+        & .slides {
+            height: auto;
+        }
+
+        & .slides img {
+            height: auto;
+            object-fit: unset;
+        }
+    }
+    
 }
