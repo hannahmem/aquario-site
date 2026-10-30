@@ -46,6 +46,67 @@
     }
 }
 
+@media (prefers-reduced-motion: no-preference) {
+    @media(width > 55em) {
+        .grid .img-container {
+            opacity: 0;
+            animation: imageEntry linear both;
+            animation-timeline: view();
+            animation-range: entry 0%;
+        }
+    
+        .grid .img-container:nth-child(2) {
+            animation-range: entry 20%;
+        }
+    
+        .grid .img-container:nth-child(3) {
+            animation-range: entry 40%;
+        }
+    
+        .grid .img-container:nth-child(4) {
+            animation-range: entry 60%;
+        }
+    }
+
+    @media (55em > width > 40em) {
+        .grid .img-container {
+            opacity: 0;
+            animation: imageEntry linear both;
+            animation-timeline: view();
+            animation-range: entry 0%;
+        }
+
+        .grid .img-container:nth-child(2) {
+            animation-range: entry 40%;
+        }
+    
+        .grid .img-container:nth-child(3) {
+            animation-range: entry 80%;
+        }
+
+        .grid .img-container:nth-child(4) {
+            animation-range: entry 10%;
+        }
+    }
+
+    @media (width < 30em) {
+        .grid .img-container {
+            opacity: 0;
+            animation: imageEntry linear both;
+            animation-timeline: view();
+            animation-range: entry 10%;
+        }
+    }
+}
+
+@supports not (animation-timeline: view()) {
+    .grid .img-container {
+      animation: none;
+      opacity: 1;
+      transform: none;
+    }
+}
+
 @media (width > 41em) {
     .product-images {
         padding: 0 1.5em;
@@ -65,3 +126,15 @@
         margin-bottom: 0;
     }
 }
+
+@keyframes imageEntry {
+    from {
+        opacity: 0;
+        transform: translateY(300px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+}
+

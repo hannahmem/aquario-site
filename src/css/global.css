@@ -4,6 +4,11 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: var(--sidebar-height);
+}
+
 :root {
     --ff: 'Larken', sans-serif;
     --text-sm: 100 .85rem/1.25 var(--ff);
@@ -49,7 +54,6 @@
 body {
     width: 100%;
     overflow-x: hidden;
-    scroll-behavior: smooth;
 }
 
 section {
