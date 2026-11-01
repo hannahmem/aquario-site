@@ -7,6 +7,46 @@
     margin: 2em 0;
 }
 
+#banner-arom-desk {
+    background-image: url("../assets/banners/banner_arormaterapia_desktop.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 100%;
+    height: 45vw;
+    background-attachment: fixed;
+}
+
+#banner-arom-mob {
+    background-image: url("../assets/banners/banner_aromaterapia_mobile.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 100%;
+    height: 170vw;
+    background-attachment: fixed;
+}
+
+#banner-clot-acc-desk {
+    background-image: url("../assets/banners/banner_roupas_e_acessorios_desktop.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 100%;
+    height: 45vw;
+    background-attachment: fixed;
+}
+
+#banner-clot-acc-mob {
+    background-image: url("../assets/banners/banner_roupas_e_accessorios_mobile.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 100%;
+    height: 170vw;
+    background-attachment: fixed;
+}
+
 .mobile {
     display: inline-flex;
     width: 100%;
@@ -75,15 +115,6 @@ input[type="radio"] {
     background-color: var(--red-color);
 } */
 
-@media (prefers-reduced-motion: no-preference) {
-    .banner-container {
-        opacity: 0;
-        animation: fade-in linear forwards;
-        animation-timeline: view();
-        animation-range: entry;
-    }
-}
-
 @media (width > 49em) {
     .desktop {
         display: block;
@@ -103,8 +134,4 @@ input[type="radio"] {
         animation: none;
         background-image: url(../assets/banners/banner-decoracao-mobile_1.png);
     }
-}
-
-@keyframes fade-in {
-    to { opacity: 1}
 }

@@ -83,31 +83,31 @@
 
     <main id="home">
         <section id="banner-decoracao" class="banner-container" aria-labelledby="banner-heading">
-            <div class="banner-carousel">
+            <div class="banner-carousel" role="region" aria-label="Banners de decoração">
                 <div class="slides">
-                    <img src="src/assets/banners/banner_decoracao_desktop_banner_1.png" alt="Uma estatueta do Buda meditando como objeto de decoração, luminárias da marca Tiffany suspendidas, um sofá com almofadas coloridas e uma mesa de centro redonda com objetos de decoração. Texto sobre a imagem: Decoração que abraça. Texturas, formas e cores para renovar sua casa.">
-                    <img src="src/assets/banners/banner_decoracao_desktop_banner_2.png" alt="">
-                    <img src="src/assets/banners/banner_decoracao_desktop_banner_3.png" alt="">
+                    <img src="src/assets/banners/banner_decoracao_desktop_banner_1.png" alt="Banner composto por uma estatueta do Buda meditando como objeto de decoração, luminárias coloridas tipo Tiffany suspendidas, um sofá com almofadas coloridas e uma mesa de centro redonda com objetos de decoração. Texto sobre a imagem: Decoração que abraça. Texturas, formas e cores para renovar sua casa.">
+                    <img src="src/assets/banners/banner_decoracao_desktop_banner_2.png" alt="Banner composto por uma mesa posta com pratos vermelhos e azuis, talheres em ouro, velas em formato de flor e no formato tradicional. Texto sobre a imagem: Detalhes que encantam e transformam cada refeição em um momento especial.">
+                    <img src="src/assets/banners/banner_decoracao_desktop_banner_3.png" alt="Banner composto por uma sala de estar com a estatueta de um Buda, elefantes decorativos em cerâmica verdes, uma luminária lanterna com uma vela acesa dentro e plantas ao redor para compor a decoração. Texto sobre a imagem: Convite à paz. Um refúgio sereno onde cada detalhe inspira equilíbrio e bem-estar.">
                 </div>
 
-                <button class="left-arrow">&#10094;</button>
-                <button class="right-arrow">&#10095;</button>
+                <button type="button" class="left-arrow" aria-label="Banner anterior">&#10094;</button>
+                <button type="button" class="right-arrow" aria-label="Próximo banner">&#10095;</button>
             </div>
             <!-- <div class="banner-mobile" role="img">
                 <h2 id="banner-heading" class="sr-only">Decoração que abraça</h2>
                 <span id="banner-mobile" class="sr-only">Texturas, formas e cores para renovar sua casa.</span>
             </div> -->
             
-            <div class="banner-carousel-mobile">
+            <div class="banner-carousel-mobile" role="region" aria-label="Banners de decoração">
                 <div class="slides-mobile">
-                    <img src="src/assets/banners/banner-decoracao-mobile_1.png" alt="">
-                    <img src="src/assets/banners/banner-decoracao-mobile_2.png" alt="">
-                    <img src="src/assets/banners/banner-decoracao-mobile_3.png" alt="">
+                    <img src="src/assets/banners/banner_decoracao_mobile_banner_1.png" alt="Banner composto por uma estatueta do Buda meditando como objeto de decoração, luminárias coloridas tipo Tiffany suspendidas, um sofá com almofadas coloridas e uma mesa de centro redonda com objetos de decoração. Texto sobre a imagem: Decoração que abraça. Texturas, formas e cores para renovar sua casa.">
+                    <img src="src/assets/banners/banner_decoracao_mobile_banner_3.png" alt="Banner composto velas acesas, uma luminária de lanterna antiga com uma vela acesa dentro, uma taça de vinho e flores decoratias. Texto sobre a imagem: Detalhes que encantam e transformam cada refeição em um momento especial.">
+                    <img src="src/assets/banners/banner_decoracao_mobile_banner_2.png" alt="Banner composto por uma sala de estar com objetos decorativos de elefantes em cerâmica verdes, uma luminária lanterna com uma vela acesa dentro e plantas ao redor para compor a decoração. Texto sobre a imagem: Convite à paz. Um refúgio sereno onde cada detalhe inspira equilíbrio e bem-estar.">
                 </div>
 
                 <div class="carousel-btn-wrapper">
-                    <button class="left-arrow-mobile">&#10094;</button>
-                    <button class="right-arrow-mobile">&#10095;</button>
+                    <button type="button" class="left-arrow-mobile" aria-label="Banner anterior">&#10094;</button>
+                    <button type="button" class="right-arrow-mobile" aria-label="Próximo banner">&#10095;</button>
                 </div>
             </div>
         </section>
@@ -140,13 +140,13 @@
             <div class="box-container">
                 <div class="content-container">
                     <div class="container-border">
-                        <img id="decoration-up1" src="src/assets/page-decoration/tiffany-up.svg" alt="">
+                        <img id="decoration-up1" src="src/assets/page-decoration/tiffany-up.svg" alt="Arabescos decorativos em vermelho">
                         <div class="text-border">
-                            <img id="decoration-up2" src="src/assets/page-decoration/tiffany-up.svg" alt="">
+                            <img id="decoration-up2" src="src/assets/page-decoration/tiffany-up.svg" alt="Arabescos decorativos em vermelho">
                             <h2>luminárias tiffany</h2>
                             <span class="subtitle">encanto e elegância atemporal</span>
                             <p>Inspirados no estilo Art Nouveau, os abajures e luminárias em estilo Tiffany são verdadeiras obras de arte em vidro colorido. Cada peça é feita com atenção aos detalhes, criando efeitos de luz únicos que transformam qualquer ambiente. Com suas cúpulas de mosaico vítreo e bases ornamentadas, eles combinam charme clássico com sofisticação artesanal. Um toque de beleza, história e cor para sua casa.</p>
-                            <img id="decoration-down2" src="src/assets/page-decoration/tiffany-down.svg" alt="">
+                            <img id="decoration-down2" src="src/assets/page-decoration/tiffany-down.svg" alt="Arabescos decorativos em vermelho">
                         </div>
                         <div class="img-container">
                             <input role="switch" id="toggle-btn" type="checkbox">
@@ -163,21 +163,23 @@
         </section>
 
         <section id="banner-aromatherapy" class="banner-container">
-            <div class="mobile">
-                <img class="slide-mobile" src="src/assets/banners/banner_aromaterapia_mobile.png" alt="">
+            <div class="mobile" id="banner-arom-mob">
+                <!-- <img class="slide-mobile" src="src/assets/banners/banner_aromaterapia_mobile.png" alt=""> -->
+                 <span class="visually-hidden">Composição decorativa com aromatizadores de cereja e avelã da marca Kailash, velas perfumadas e objetos de decoração, como um suporte para velas em forma de flor e uma saboneteira em louça em formato de flor com um passarinho na borda, e um banheiro rústico com banheira, pia de pedra com um espelho redondo na parede, móveis de madeira e vasos de planta como decoração. Texto sobre a imagem: Transforme o seu banho em um ritual de bem-estar. Aromas, luz suave e momentos só seus."</span>
             </div>
-            <div class="desktop">
-                <img class="banners" src="src/assets/banners/banner_arormaterapia_desktop.png" alt="Aromatizadores de cereja e avelã da marca Kailash, velas perfumadas e objetos de decoração, como um suporte para velas em forma de flor e uma saboneteira em louça em formato de flor com um passarinho na borda. Ao lado, um banheiro rústico com banheira, pia de pedra com um espelho redondo na parede, móveis de madeira e vasos de planta como decoração. Texto sobre a imagem: Transforme o seu banho em um ritual de bem-estar. Aromas, luz suave e momentos só seus.">
+            <div class="desktop" id="banner-arom-desk">
+                <!-- <img class="banners" src="src/assets/banners/banner_arormaterapia_desktop.png" alt="Aromatizadores de cereja e avelã da marca Kailash, velas perfumadas e objetos de decoração, como um suporte para velas em forma de flor e uma saboneteira em louça em formato de flor com um passarinho na borda. Ao lado, um banheiro rústico com banheira, pia de pedra com um espelho redondo na parede, móveis de madeira e vasos de planta como decoração. Texto sobre a imagem: Transforme o seu banho em um ritual de bem-estar. Aromas, luz suave e momentos só seus."> -->
+                <span class="visually-hidden">Composição decorativa com aromatizadores de cereja e avelã da marca Kailash, velas perfumadas e objetos de decoração, como um suporte para velas em forma de flor e uma saboneteira em louça em formato de flor com um passarinho na borda, e um banheiro rústico com banheira, pia de pedra com um espelho redondo na parede, móveis de madeira e vasos de planta como decoração. Texto sobre a imagem: Transforme o seu banho em um ritual de bem-estar. Aromas, luz suave e momentos só seus."</span>
             </div>
         </section>
 
         <section id="aromatherapy" class="product-images side-elements-yellow">
-            <img class="title-decoration" src="src/assets/page-decoration/aromaterapia.png" alt="">
+            <img class="title-decoration" src="src/assets/page-decoration/aromaterapia.png" alt="Arabescos decorativos em amarelo">
             <h1 class="title yellow">aromaterapia</h1>
             <p class="subtitle yellow">Respire bem-estar: frangrâncias que equilibram corpo e mente.</p>
             <div class="grid">
                 <div class="img-container">
-                    <img src="src/assets/photos/aromatizadores.png" alt="Aromatizador de alecrim em vidro exposto em cima de uma mesa, com um jardimde flores ao fundo.">
+                    <img src="src/assets/photos/aromatizadores.png" alt="Aromatizador de alecrim em vidro exposto em cima de uma mesa, com um jardim de flores ao fundo.">
                     <p>aromatizadores de ambiente</p>
                 </div>
                 <div class="img-container">
@@ -196,7 +198,7 @@
 
         <section id="highlights-2">
             <div class="box-container">
-                <img id="decoration-top" src="src/assets/page-decoration/destaques-up.png" alt="">
+                <img id="decoration-top" src="src/assets/page-decoration/destaques-up.png" alt="Arabescos decorativos em amarelo">
                 <div class="content-container">
                     <!-- <div class="container-border"> -->
                         <div class="img-wrapper" aria-label="Slide de fotos" data-carousel>
@@ -215,7 +217,7 @@
                                 </li>
                                 <li class="slides">
                                     <div class="slide-content-wrapper">
-                                        <img src="src/assets/banners/quadriculado_produtos_lavanda.png" alt="Aromatizador de ambiente com aroma de alecrim.">
+                                        <img src="src/assets/banners/quadriculado_produtos_lavanda.png" alt="Aromatizador de ambiente com aroma de lavanda.">
                                         <!-- <img src="src/assets/banners/lavanda-text.png" alt=""> -->
                                         <div class="slide-text-container">
                                             <h2>lavanda</h2>
@@ -236,7 +238,7 @@
                                     </div></li>
                                 <li class="slides">
                                     <div class="slide-content-wrapper">
-                                        <img src="src/assets/banners/quadriculado_produtos_petalas_frescas.png" alt="Aromatizador de ambiente com aroma de alecrim.">
+                                        <img src="src/assets/banners/quadriculado_produtos_petalas_frescas.png" alt="Aromatizador de ambiente com aroma de pétalas frescas.">
                                         <!-- <img src="src/assets/banners/petalas-frescas-text.png" alt=""> -->
                                         <div class="slide-text-container">
                                             <h2>pétalas frescas</h2>
@@ -258,19 +260,23 @@
                         </div>
                     <!-- </div> -->
                 </div>
-                <img id="decoration-bottom" src="src/assets/page-decoration/destaques-down.png" alt="">
+                <img id="decoration-bottom" src="src/assets/page-decoration/destaques-down.png" alt="Arabescos decorativos em amarelo">
             </div>
         </section>
 
         <section id="banner-clothes-and-accessories" class="banner-container">
-            <div class="mobile"><img src="src/assets/banners/banner_roupas_e_accessorios_mobile.png" alt=""></div>
-            <div class="desktop">
-                <img class="banners" src="src/assets/banners/banner-roupas-e-acessorios-desktop.png" alt="Pashminas de diversas cores, como azul, verde e vermelha, dobradas e penduradas em exposição. Texto sobre a foto: Tudo que você ama em um só lugar. Descubra sua próxima peça favorita.">
+            <div class="mobile" id="banner-clot-acc-mob">
+                <!-- <img src="src/assets/banners/banner_roupas_e_accessorios_mobile.png" alt=""> -->
+                 <span class="visually-hidden">Decoração de pashminas de diversas cores, como azul, verde e vermelha penduradas em exposição em uma composição com um vaso de planta e um vaso em cerâmica. Texto sobre a foto: "Tudo que você ama em um só lugar. Descubra sua próxima peça favorita."</span>
+            </div>
+            <div class="desktop" id="banner-clot-acc-desk">
+                <!-- <img class="banners" src="src/assets/banners/banner-roupas-e-acessorios-desktop.png" alt="Pashminas de diversas cores, como azul, verde e vermelha, dobradas e penduradas em exposição. Texto sobre a foto: Tudo que você ama em um só lugar. Descubra sua próxima peça favorita."> -->
+                <span class="visually-hidden">Decoração de pashminas de diversas cores, como azul, verde e vermelha, dobradas e penduradas em exposição. Texto sobre a foto: "Tudo que você ama em um só lugar. Descubra sua próxima peça favorita."</span>
             </div>
         </section>
 
         <section id="clothes-and-accessories" class="product-images side-elements-red">
-            <img class="title-decoration" src="src/assets/page-decoration/decoracao.png" alt="Design decorativo do título da seção">
+            <img class="title-decoration" src="src/assets/page-decoration/decoracao.png" alt="Arabescos decorativos em vermelho">
             <h1 class="title red">roupas e acessórios</h1>
             <p class="subtitle red">Tecidos que encantam, acessórios que completam.</p>
             <div class="grid">
@@ -305,21 +311,21 @@
                         </div>
                         <img src="src/assets/banners/banner_destaque_aomaterapia_kailash_mobile_banner-3.png" alt="">
                     </div>
-            <div class="banner-carousel-kailash">
+            <div class="banner-carousel-kailash" role="region" aria-label="Banners da coleção Kailash">
                 <div class="slides-kailash">
                     <div class="banner-container-kailash">
-                        <img src="src/assets/banners/banner_destaque_aromaterapia_kailash.png" alt="Uma estatueta do Buda meditando como objeto de decoração, luminárias da marca Tiffany suspendidas, um sofá com almofadas coloridas e uma mesa de centro redonda com objetos de decoração. Texto sobre a imagem: Decoração que abraça. Texturas, formas e cores para renovar sua casa.">
-                        <img src="src/assets/banners/banner_destaque_aromaterapia_kailash_2.png" alt="">
+                        <img src="src/assets/banners/banner_destaque_aromaterapia_kailash.png" alt="Produtos da marca Kailash, como um aromatizador, velas, espuma de banho, sabonete líquido e essência com aroma de flor de figo.">
+                        <img src="src/assets/banners/banner_destaque_aromaterapia_kailash_2.png" alt="Produtos da marca Kailash, como um aromatizador, velas, espuma de banho, sabonete líquido e essência com aroma de flor de figo."">
                     </div>
                 </div>
-                <button class="left-arrow-kailash">&#10094;</button>
-                <button class="right-arrow-kailash">&#10095;</button>
+                <button type="button" class="left-arrow-kailash" aria-label="Banner anterior">&#10094;</button>
+                <button type="button" class="right-arrow-kailash" aria-label="Próximo banner">&#10095;</button>
             </div>
         </section>
             
         <section id="about">
             <div class="title-wrapper">
-                <img src="src/assets/page-decoration/nossa-historia.svg" alt="">
+                <img src="src/assets/page-decoration/nossa-historia.svg" alt="Arabescos decorativos em amarelo">
                 <h1 class="title yellow">nossa história</h1>
             </div>
             <div class="about-container">
@@ -333,7 +339,7 @@
                             <p class="paragraph">&nbsp;&nbsp;&nbsp;&nbsp;Há 37 anos, Augusto e Glória vêm trabalhando duro para inovar e trazer para a loja produtos de que não apenas gostam, mas que sabem que seus clientes também irão apreciar.</p>
                         </div>
                         <div class="col2">
-                             <p class="paragraph">Isto porque, por todos esses anos, o casal vem construindo uma relação sólida com seus clientes, fortalecendo laços e estabelecendo uma comunicação que permitiu com que a loja chegasse tão longe e tomasse a forma que tem hoje em dia. Esta transformação não foi apenas um esforço unilateral da família Manes e Morais, mas um trabalho em conjunto com seus clientes e amigos.</p>
+                             <p class="paragraph">&nbsp;&nbsp;&nbsp;&nbsp;Por todos esses anos, o casal vem construindo uma relação sólida com seus clientes, fortalecendo laços e estabelecendo uma comunicação que permitiu com que a loja chegasse tão longe e tomasse a forma que tem hoje em dia. Esta transformação não foi apenas um esforço unilateral da família Manes e Morais, mas um trabalho em conjunto com seus clientes e amigos.</p>
                             <p class="paragraph">&nbsp;&nbsp;&nbsp;&nbsp;Hoje, a Aquário já é a marca registrada do casal e evoluiu de tal forma que nela podemos encontrar produtos de decoração, roupas, esotéricos, bijuterias, velas, aromatizadores, óleos essenciais, os amados incensos e muito mais. Tudo isso fruto de muito suor, amor e dedicação.</p>
                             <p>&nbsp;&nbsp;&nbsp;&nbsp;Ao longo de 37 anos aprendemos que o tempo é mudança. Por isso, estamos sempre prontos para abraçar o novo e dar continuidade a nossa história.</p>
                         </div>
@@ -372,9 +378,9 @@
         <section id="contact">
             <div class="contact-container">
                 <div class="decoration-container">
-                    <img src="src/assets/page-decoration/contact.png" alt="">
+                    <img src="src/assets/page-decoration/contact.png" alt="Arabescos decorativos em amarelo">
                     <h1 class="yellow title">nossa loja</h1>
-                    <img src="src/assets/page-decoration/contact.png" alt="">
+                    <img src="src/assets/page-decoration/contact.png" alt="Arabescos decorativos em amarelo">
                 </div>
                 <div class="content-wrapper">
                     <div>

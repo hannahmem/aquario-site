@@ -31,6 +31,7 @@ const imagesLen = images.length
 
 let index = 0
 let timer = null
+const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
 
 btnLeft.addEventListener('click', () => {
     index--;
@@ -59,7 +60,7 @@ const increaseIndex = () => {
 }
 
 const startAutoplay = () => {
-    if (timer) return
+    if (timer || prefersReducedMotion) return
     timer = setInterval(() => {
         increaseIndex()
         changeImage()
@@ -73,6 +74,10 @@ const stopAutoplay = () => {
 
 container.addEventListener('mouseenter', stopAutoplay)
 container.addEventListener('mouseleave', startAutoplay)
+container.addEventListener('focusin', stopAutoplay)
+container.addEventListener('focusout', (event) => {
+    if (!container.contains(event.relatedTarget)) startAutoplay()
+})
 
 // banner decoration mobile 
 const slidesMob = document.querySelector('.slides-mobile')
@@ -97,6 +102,10 @@ btnRightMob.addEventListener('click', () => {
 
 containerMob.addEventListener('mouseenter', stopAutoplay)
 containerMob.addEventListener('mouseleave', startAutoplay)
+containerMob.addEventListener('focusin', stopAutoplay)
+containerMob.addEventListener('focusout', (event) => {
+    if (!containerMob.contains(event.relatedTarget)) startAutoplay()
+})
 
 startAutoplay()
 
@@ -132,7 +141,7 @@ const increaseIndexKai = () => {
 
 // autoplay kailash
 const startAutoplayKai = () => {
-    if (timerKai) return
+    if (timerKai || prefersReducedMotion) return
     timerKai = setInterval(() => {
         increaseIndexKai()
         changeBannerKai()
@@ -146,6 +155,10 @@ const stopAutoplayKai = () => {
 
 containerKai.addEventListener('mouseenter', startAutoplayKai)
 containerKai.addEventListener('mouseleave', stopAutoplayKai)
+containerKai.addEventListener('focusin', stopAutoplayKai)
+containerKai.addEventListener('focusout', (event) => {
+    if (!containerKai.contains(event.relatedTarget)) startAutoplayKai()
+})
 
 startAutoplayKai()
 

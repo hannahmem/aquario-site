@@ -36,6 +36,7 @@
     & .grid {
         margin-top: unset;
         grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 0;
     }
 }
 
@@ -69,6 +70,10 @@
         /* flex-basis: 60%; */
     }
 
+    .text-wrapper .grid {
+        gap: 1.5rem;
+    }
+
     /* .img-wrapper {
         flex-basis: 40%;
     } */
@@ -78,5 +83,9 @@
     .about-container {
        width: 90%;
        margin: 0 auto;
+    }
+
+    .text-wrapper .grid {
+        gap: 1.5rem;
     }
 }
