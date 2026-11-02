@@ -117,19 +117,19 @@
             <h1 class="title red">Decoração</h1>
             <p class="subtitle red">Toques que transformam. Decore com alma, viva com estilo.</p>
             <div class="grid">
-                <div class="img-container">
+                <div class="img-container animation1">
                     <img src="src/assets/photos/luminaria.png" alt="Duas luminárias coloridas da marca Tiffany suspendidas">
                     <p>iluminação</p>
                 </div>
-                <div class="img-container">
+                <div class="img-container animation1">
                     <img src="src/assets/photos/almofadas.png" alt="Conjunto de almofadas coloridas, de cor predominante rosa, com padrões florais">
                     <p>almofadas</p>
                 </div>
-                <div class="img-container">
+                <div class="img-container animation1">
                     <img src="src/assets/photos/decoracao.png" alt="Estatueta do Buda meditando iluminado por velas nas mãos cujo suporte tem formato floral">
                     <p>decoração</p>
                 </div>
-                <div class="img-container">
+                <div class="img-container animation1">
                     <img src="src/assets/photos/casa-e-cozinha.png" alt="Conjunto de objetos decorativos de vidro de diferentes formatos para enfeitar a mesa">
                     <p>presentes</p>
                 </div>
@@ -151,6 +151,7 @@
                         <div class="img-container">
                             <input role="switch" id="toggle-btn" type="checkbox">
                             <label for="toggle-btn"></label>
+                            <span class="visually-hidden">Alternar luz do abajur</span>
                             <ul class="slide-list">
                                 <li class="switch"><img src="src/assets/banners/abajur_apagado.png" alt="Abajur colorido estilo Tiffany, art-déco, com a luz apagada."></li>
                                 <li class="switch"><img src="src/assets/banners/abajur_aceso.png" alt="Abajur colorido estilo Tiffany, art-déco, com a luz acesa."></li>
@@ -178,19 +179,19 @@
             <h1 class="title yellow">aromaterapia</h1>
             <p class="subtitle yellow">Respire bem-estar: frangrâncias que equilibram corpo e mente.</p>
             <div class="grid">
-                <div class="img-container">
+                <div class="img-container animation2">
                     <img src="src/assets/photos/aromatizadores.png" alt="Aromatizador de alecrim em vidro exposto em cima de uma mesa, com um jardim de flores ao fundo.">
                     <p>aromatizadores de ambiente</p>
                 </div>
-                <div class="img-container">
+                <div class="img-container animation2">
                     <img src="src/assets/photos/essencias.png" alt="Três vidros de essência da marca Kailash de diferentes aromas, como cereja e avelã.">
                     <p>essências</p>
                 </div>
-                <div class="img-container">
+                <div class="img-container animation2">
                     <img src="src/assets/photos/velas.png" alt="Vela perfumada de aroma flor de figo em copo de vidro com embalagem da marca Kailash.">
                     <p>velas perfumadas</p>
                 </div>
-                <div class="img-container">
+                <div class="img-container animation2">
                     <img src="src/assets/photos/incenso.png" alt="Caixa de incenso nag champa e alguns incensos fora da caixa para decoração em cima de uma mesa.">
                     <p>incensos</p>
                 </div>
@@ -280,19 +281,19 @@
             <h1 class="title red">roupas e acessórios</h1>
             <p class="subtitle red">Tecidos que encantam, acessórios que completam.</p>
             <div class="grid">
-                <div class="img-container">
+                <div class="img-container animation3">
                     <img src="src/assets/photos/roupas.png" alt="Modelo expondo as costas nuas de um vestido azul-petróleo e vermelho com estampas abstratas. Vestido fechado por laços na nuca e no meio das costas.">
                     <p>roupas</p>
                 </div>
-                <div class="img-container">
+                <div class="img-container animation3">
                     <img src="src/assets/photos/pashmina.png" alt="Pashmina vermelha com estampa diversificada exposta em uma cadeira.">
                     <p>pashminas</p>
                 </div>
-                <div class="img-container">
+                <div class="img-container animation3">
                     <img src="src/assets/photos/bijuteiras.png" alt="Braceletes e colares em pedras azuis.">
                     <p>bijuteria</p>
                 </div>
-                <div class="img-container">
+                <div class="img-container animation3">
                     <img src="src/assets/photos/anel.png" alt="Anel de pedra azul em prata.">
                     <p>prata</p>
                 </div>
@@ -416,5 +417,9 @@
             </div>
         </footer>
     </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/ScrollTrigger.min.js"></script>
+    <script src="src/javascript/animations.js"></script>
 </body>
 </html>
