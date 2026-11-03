@@ -1,5 +1,5 @@
 .banner-carousel-kailash {
-    max-width: 100%;
+    width: 100%;
     position: relative;
     overflow: hidden;
     height: auto;
@@ -10,9 +10,13 @@
         transition: transform ease 1s;
         flex-direction: row;
     }
+
+    /* & .banner-container-kailash {
+    } */
     
     & .slides-kailash img {
         width: 100%;
+        flex: 0 0 100%;
     }
     
     & .banner-container-kailash {

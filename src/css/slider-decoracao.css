@@ -17,6 +17,7 @@
     
     & .slides img {
         width: 100%;
+        flex: 0 0 100%;
     }
     
     & button {
@@ -57,6 +58,7 @@
 
         & .slides-mobile img {
             width: 100%;
+            flex: 0 0 100%;
         }
 
         & .carousel-btn-wrapper {

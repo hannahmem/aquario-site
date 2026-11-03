@@ -54,7 +54,7 @@ const changeImage = () => {
 
 const increaseIndex = () => {
     index++
-    if (index > 2) {
+    if (index >= imagesLen) {
         index = 0
     }
 }
@@ -136,7 +136,7 @@ const changeBannerKai = () => {
 
 const increaseIndexKai = () => {
     indexKai++
-    if (indexKai > 1) indexKai = 0
+    if (indexKai >= slidesKai.children.length) indexKai = 0
 }
 
 // autoplay kailash
