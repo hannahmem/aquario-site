@@ -4,7 +4,7 @@ let mm = gsap.matchMedia()
 
 console.log(document.querySelector(".grid"))
 
-mm.add("(win-width: 30em) and (prefers-reduced-motion: no-preference)", () => {
+mm.add("(min-width: 28em) and (prefers-reduced-motion: no-preference)", () => {
 	gsap.fromTo(".animation1", {
 		y: 500,
 		opacity: 0,
@@ -55,7 +55,7 @@ mm.add("(win-width: 30em) and (prefers-reduced-motion: no-preference)", () => {
 })
 
 
-mm.add("(max-width: 430px) and (prefers-reduced-motion: no-preference)", () => {
+mm.add("(max-width: 27em) and (prefers-reduced-motion: no-preference)", () => {
 	const decoration = gsap.utils.toArray(".animation1");
 	const aromatherapy = gsap.utils.toArray(".animation2");
 	const clothes = gsap.utils.toArray(".animation3");
