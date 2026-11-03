@@ -70,8 +70,7 @@ mm.add("(max-width: 430px) and (prefers-reduced-motion: no-preference)", () => {
 		}, {
 			scrollTrigger: {
 				trigger: img, // lembre-se de usar o pai
-				start: "top 100%",
-				end: "bottom bottom",
+				start: "top 140%",
 				toggleActions: "play none none none"
 			},
 			opacity: 1,
@@ -90,8 +89,7 @@ mm.add("(max-width: 430px) and (prefers-reduced-motion: no-preference)", () => {
 		}, {
 			scrollTrigger: {
 				trigger: img, // lembre-se de usar o pai
-				start: "top 100%",
-				end: "bottom bottom",
+				start: "top 140%",
 				toggleActions: "play none none none"
 			},
 			opacity: 1,
@@ -110,7 +108,7 @@ mm.add("(max-width: 430px) and (prefers-reduced-motion: no-preference)", () => {
 		}, {
 			scrollTrigger: {
 				trigger: img, // lembre-se de usar o pai
-				start: "top 100%",
+				start: "top 140%",
 				end: "bottom bottom",
 				toggleActions: "play none none none"
 			},
