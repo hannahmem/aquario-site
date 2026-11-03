@@ -153,8 +153,8 @@ const stopAutoplayKai = () => {
     timerKai = null
 }
 
-containerKai.addEventListener('mouseenter', startAutoplayKai)
-containerKai.addEventListener('mouseleave', stopAutoplayKai)
+containerKai.addEventListener('mouseenter', stopAutoplayKai)
+containerKai.addEventListener('mouseleave', startAutoplayKai)
 containerKai.addEventListener('focusin', stopAutoplayKai)
 containerKai.addEventListener('focusout', (event) => {
     if (!containerKai.contains(event.relatedTarget)) startAutoplayKai()
